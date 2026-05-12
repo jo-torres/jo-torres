@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pymen — Diseñadora independiente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "name": "Jo Torres",
+  "role": "Digital Project Manager | UX/UI",
+  "location": "Santiago, Chile",
+  "accent": "#C8502A",
+  "paper": "#F2EADC",
+  "ink": "#1A1714",
+  "theme": "warm",
+  "showMarquee": true,
+  "showCursor": true,
+  "italicDisplay": true,
+  "lang": "es"
+}/*EDITMODE-END*/;
+</script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- nav -->
+<nav class="nav">
+  <div class="nav__mark">
+    <div class="nav__dot"></div>
+    <div class="nav__name" id="nav-name">Jo Torres</div>
+  </div>
+  <div class="nav__links">
+    <a href="#work" data-i18n="nav_work">Proyectos</a>
+    <a href="#about" data-i18n="nav_about">Sobre mí</a>
+    <a href="#services" data-i18n="nav_services">Servicios</a>
+    <a href="#contact" data-i18n="nav_contact">Contacto</a>
+  </div>
+  <a href="#contact" class="nav__cta"><span class="pulse"></span> <span data-i18n="nav_cta">Disponible en mayo 2026</span></a>
+</nav>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__meta mono">
+      <div><span data-i18n="meta_index">Índice</span><strong>01 / Portfolio '26</strong></div>
+      <div><span data-i18n="meta_practice">Práctica</span><strong id="m-role">Marca e interacción</strong></div>
+      <div><span data-i18n="meta_based">Ubicación</span><strong id="m-loc">Lisboa, PT · UTC+0</strong></div>
+      <div><span data-i18n="meta_status">Estado</span><strong style="color: var(--accent);" data-i18n="meta_status_val">Abierta para primavera</strong></div>
+    </div>
+
+    <h1 class="hero__headline">
+      <span class="line"><span class="reveal" data-i18n="hero_l1">Diseñando con</span></span>
+      <span class="line"><span class="reveal"><span class="ital" data-i18n="hero_l2a">paciencia</span> <span class="ampersand">&amp;</span></span></span>
+      <span class="line"><span class="reveal" data-i18n="hero_l3">un poco de travesura.</span></span>
+    </h1>
+
+    <div class="hero__arrow">
+      <span data-i18n="hero_arrow">un rincón tranquilo<br>del internet</span>
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 6 Q 20 30, 34 20 M 34 20 L 26 14 M 34 20 L 28 28" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+    </div>
+
+    <div class="hero__bottom">
+      <p class="hero__blurb" id="hero-blurb">
+        Soy <em id="b-name">Pymen</em> — diseñadora freelance que ayuda a fundadores y equipos pequeños a construir marcas que <em>se sienten hechas a mano</em>, y productos que no piden perdón por tener personalidad.
+      </p>
+      <div class="hero__portrait">
+        <div class="tag" data-i18n="portrait_tag">RETRATO · 4x5</div>
+        <div class="ph" data-i18n="portrait_ph">coloca fotografía aquí · 1100 × 1400</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" id="marquee-wrap">
+    <div class="marquee__track" id="marquee-track">
+      <span class="marquee-copy">
+        <em class="ital">Sistemas de marca</em> <span class="star">✦</span>
+        Diseño editorial <span class="star">✦</span>
+        <em class="ital">Sitios web</em> con buen comportamiento <span class="star">✦</span>
+        Dirección de arte <span class="star">✦</span>
+        Identidades <em class="ital">tipográficas</em> <span class="star">✦</span>
+        Diseño de interacción <span class="star">✦</span>
+      </span>
+      <span class="marquee-copy" aria-hidden="true">
+        <em class="ital">Sistemas de marca</em> <span class="star">✦</span>
+        Diseño editorial <span class="star">✦</span>
+        <em class="ital">Sitios web</em> con buen comportamiento <span class="star">✦</span>
+        Dirección de arte <span class="star">✦</span>
+        Identidades <em class="ital">tipográficas</em> <span class="star">✦</span>
+        Diseño de interacción <span class="star">✦</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__grid">
+      <div class="about__label mono" data-i18n="about_label">(Sobre mí) — 02</div>
+      <div class="about__body reveal-on-scroll" id="about-body">
+        <p>He pasado los últimos <strong>ocho años</strong> haciendo cosas en internet — en estudios, en startups, y ahora por mi cuenta.</p>
+        <p>Me importa el <em>oficio</em>, pero me importan más las personas al otro lado de la pantalla. Una marca es una promesa; un producto es un hábito. Ambos merecen calidez.</p>
+        <p>Actualmente colaboro con un puñado de clientes al año. <em>Lento a propósito.</em></p>
+      </div>
+    </div>
+
+    <div class="about__facts reveal-on-scroll">
+      <div>
+        <div class="fact__num">08<span class="ital">+</span></div>
+        <div class="fact__label" data-i18n="fact_1">años trabajando con fundadores, agencias y equipos internos</div>
+      </div>
+      <div>
+        <div class="fact__num">42</div>
+        <div class="fact__label" data-i18n="fact_2">marcas, productos y proyectos editoriales entregados</div>
+      </div>
+      <div>
+        <div class="fact__num"><span class="ital">4</span> / año</div>
+        <div class="fact__label" data-i18n="fact_3">clientes por año — profundidad antes que volumen</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <h2 id="work-head">Proyectos <em>seleccionados</em></h2>
+      <div class="mono" data-i18n="work_meta">2022 — 2026 · Índice de 12</div>
+    </div>
+
+    <ul class="work__list" id="work-list">
+      <li class="work__row" data-preview="1">
+        <div class="work__idx">01</div>
+        <div class="work__title">Soft Hours, una app de diario para <span class="ital">pensadores lentos</span></div>
+        <div class="work__tag">Producto · Marca</div>
+        <div class="work__year">2026</div>
+        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      </li>
+      <li class="work__row" data-preview="2">
+        <div class="work__idx">02</div>
+        <div class="work__title">Verdant — la tienda <span class="ital">botánica</span> de barrio</div>
+        <div class="work__tag">Identidad · Packaging</div>
+        <div class="work__year">2025</div>
+        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      </li>
+      <li class="work__row" data-preview="3">
+        <div class="work__idx">03</div>
+        <div class="work__title">The Midnight Press, una carta <span class="ital">semanal</span></div>
+        <div class="work__tag">Editorial · Web</div>
+        <div class="work__year">2025</div>
+        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      </li>
+      <li class="work__row" data-preview="4">
+        <div class="work__idx">04</div>
+        <div class="work__title">Kiln &amp; Co. — cerámica con <span class="ital">carácter</span></div>
+        <div class="work__tag">Marca · E-commerce</div>
+        <div class="work__year">2024</div>
+        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      </li>
+      <li class="work__row" data-preview="5">
+        <div class="work__idx">05</div>
+        <div class="work__title">Folk Money — <span class="ital">finanzas</span> con calidez</div>
+        <div class="work__tag">Producto · Movimiento</div>
+        <div class="work__year">2024</div>
+        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      </li>
+      <li class="work__row" data-preview="1">
+        <div class="work__idx">06</div>
+        <div class="work__title">Warmline, una radio para <span class="ital">noctámbulos</span></div>
+        <div class="work__tag">Identidad · Web</div>
+        <div class="work__year">2023</div>
+        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      </li>
+    </ul>
+
+    <div class="work__preview" id="preview">
+      <div class="ph" data-i18n="preview_ph">vista previa del proyecto · reemplaza con imagen</div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head">
+      <h2 id="services-head">En qué puedo <em>ayudarte</em></h2>
+      <div class="mono" data-i18n="services_meta">(Servicios) — 03</div>
+    </div>
+
+    <div class="services__grid">
+      <div class="service">
+        <div>
+          <div class="service__num">(01)</div>
+          <div class="service__title">Sistemas de <span class="ital">marca</span></div>
+          <div class="service__desc">Naming, logos, tipografía, color, voz — el kit completo. Diseñados para crecer contigo, y para sentirse específicos, no genéricos.</div>
+        </div>
+        <div class="service__list">
+          <span>— Identidad y manuales</span>
+          <span>— Sistemas tipo y color</span>
+          <span>— Packaging e impreso</span>
+        </div>
+      </div>
+      <div class="service">
+        <div>
+          <div class="service__num">(02)</div>
+          <div class="service__title"><span class="ital">Sitios web</span> con buen carácter</div>
+          <div class="service__desc">Editoriales, expresivos, accesibles. Entregados en Webflow, Framer o código a mano — lo que mejor sirva al trabajo y al equipo que lo mantenga.</div>
+        </div>
+        <div class="service__list">
+          <span>— Sitios de marketing</span>
+          <span>— Portfolios y case studies</span>
+          <span>— Webflow / Framer</span>
+        </div>
+      </div>
+      <div class="service">
+        <div>
+          <div class="service__num">(03)</div>
+          <div class="service__title">Oficio de <span class="ital">producto</span></div>
+          <div class="service__desc">UX, interacción e interfaz — normalmente para productos en etapas tempranas que buscan una voz sin perder legibilidad.</div>
+        </div>
+        <div class="service__list">
+          <span>— UI de app y dashboard</span>
+          <span>— Sistemas de diseño</span>
+          <span>— Prototipos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="quote">
+    <div class="quote__mark">“</div>
+    <div class="quote__body" id="quote-body">
+      Trató a nuestra startup como un <em>proyecto editorial</em> — terminamos con una marca que nuestros clientes nos <em>citan de vuelta</em>.
+    </div>
+    <div class="quote__cite" data-i18n="quote_cite">— Mira Osei, fundadora de Verdant</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__label" data-i18n="contact_label">(04) — Saluda</div>
+    <a href="/cdn-cgi/l/email-protection#41292e2d200131382c242f6f32353425282e" class="contact__email">hola<span style="color: var(--accent); font-style: italic;">@</span>pymen.studio</a>
+    <div class="contact__sub" id="contact-sub">
+      Acepto dos proyectos nuevos para <strong>mayo</strong> y <strong>julio</strong>. Escíbeme una nota corta sobre lo que estás haciendo y encontraremos tiempo para hablar.
+    </div>
+    <div class="contact__socials">
+      <a href="#">Are.na</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read.cv</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div data-i18n="footer_c">© 2022 — 2026 · Pymen Studio</div>
+  <div class="footer__big serif italic" style="font-style: italic;" data-i18n="footer_tag">hecho despacio, a propósito</div>
+  <div data-i18n="footer_loc">Lisboa / Remoto</div>
+</footer>
+
+<!-- TWEAKS PANEL -->
+<div class="tweaks" id="tweaks">
+  <h3>Ajustes</h3>
+
+  <label>Idioma
+    <div class="swatches" id="t-lang" style="gap: 8px;">
+      <button type="button" class="lang-btn" data-l="es">ES</button>
+      <button type="button" class="lang-btn" data-l="en">EN</button>
+    </div>
+  </label>
+
+  <label>Tu nombre
+    <input type="text" id="t-name" />
+  </label>
+  <label>Rol
+    <input type="text" id="t-role" />
+  </label>
+  <label>Ubicación
+    <input type="text" id="t-loc" />
+  </label>
+
+  <label style="margin-top: 6px;">Color de acento
+    <div class="swatches" id="t-sw">
+      <div class="sw" data-c="#C8502A" style="background: #C8502A"></div>
+      <div class="sw" data-c="#2E5339" style="background: #2E5339"></div>
+      <div class="sw" data-c="#3B4DA0" style="background: #3B4DA0"></div>
+      <div class="sw" data-c="#B8475E" style="background: #B8475E"></div>
+      <div class="sw" data-c="#8A6A3B" style="background: #8A6A3B"></div>
+      <div class="sw" data-c="#1A1714" style="background: #1A1714"></div>
+    </div>
+  </label>
+
+  <label style="margin-top: 10px;">Tono del papel
+    <div class="swatches" id="t-paper">
+      <div class="sw" data-c="#F2EADC" style="background: #F2EADC"></div>
+      <div class="sw" data-c="#EFE8DD" style="background: #EFE8DD"></div>
+      <div class="sw" data-c="#F5F1E8" style="background: #F5F1E8"></div>
+      <div class="sw" data-c="#E8E3D6" style="background: #E8E3D6"></div>
+      <div class="sw" data-c="#1A1714" style="background: #1A1714"></div>
+    </div>
+  </label>
+
+  <div class="row" style="margin-top: 14px;"><input type="checkbox" id="t-marquee" /> Mostrar franja marquesina</div>
+  <div class="row"><input type="checkbox" id="t-cursor" /> Cursor personalizado</div>
+  <div class="row"><input type="checkbox" id="t-italic" /> Acentos en itálica</div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function() {
+  // ---------- i18n ----------
+  const i18n = {
+    es: {
+      nav_work: 'Proyectos', nav_about: 'Sobre mí', nav_services: 'Servicios', nav_contact: 'Contacto',
+      nav_cta: 'Disponible en mayo 2026',
+      meta_index: 'Índice', meta_practice: 'Práctica', meta_based: 'Ubicación', meta_status: 'Estado', meta_status_val: 'Abierta para primavera',
+      hero_l1: 'Diseñando con', hero_l2a: 'paciencia', hero_l3: 'un poco de travesura.',
+      hero_arrow: 'un rincón tranquilo<br>del internet',
+      portrait_tag: 'RETRATO · 4x5', portrait_ph: 'coloca fotografía aquí · 1100 × 1400',
+      about_label: '(Sobre mí) — 02',
+      fact_1: 'años trabajando con fundadores, agencias y equipos internos',
+      fact_2: 'marcas, productos y proyectos editoriales entregados',
+      fact_3: 'clientes por año — profundidad antes que volumen',
+      work_meta: '2022 — 2026 · Índice de 12',
+      preview_ph: 'vista previa del proyecto · reemplaza con imagen',
+      services_meta: '(Servicios) — 03',
+      quote_cite: '— Mira Osei, fundadora de Verdant',
+      contact_label: '(04) — Saluda',
+      footer_c: '© 2022 — 2026 · Pymen Studio',
+      footer_tag: 'hecho despacio, a propósito',
+      footer_loc: 'Lisboa / Remoto',
+      // richHTML
+      hero_blurb: 'Soy <em id="b-name">__NAME__</em> — diseñadora freelance que ayuda a fundadores y equipos pequeños a construir marcas que <em>se sienten hechas a mano</em>, y productos que no piden perdón por tener personalidad.',
+      about_body: '<p>He pasado los <strong>últimos ocho años</strong> haciendo cosas en internet — en estudios, en startups, y ahora por mi cuenta.</p><p>Me importa el <em>oficio</em>, pero me importan más las personas al otro lado de la pantalla. Una marca es una promesa; un producto es un hábito. Ambos merecen calidez.</p><p>Actualmente colaboro con un puñado de clientes al año. <em>Lento a propósito.</em></p>',
+      work_head: 'Proyectos <em>seleccionados</em>',
+      services_head: 'En qué puedo <em>ayudarte</em>',
+      quote_body: 'Trató a nuestra startup como un <em>proyecto editorial</em> — terminamos con una marca que nuestros clientes nos <em>citan de vuelta</em>.',
+      contact_sub: 'Acepto dos proyectos nuevos para <strong>mayo</strong> y <strong>julio</strong>. Escíbeme una nota corta sobre lo que estás haciendo y encontraremos tiempo para hablar.',
+      work_titles: [
+        'Soft Hours, una app de diario para <span class="ital">pensadores lentos</span>',
+        'Verdant — la tienda <span class="ital">botánica</span> de barrio',
+        'The Midnight Press, una carta <span class="ital">semanal</span>',
+        'Kiln &amp; Co. — cerámica con <span class="ital">carácter</span>',
+        'Folk Money — <span class="ital">finanzas</span> con calidez',
+        'Warmline, una radio para <span class="ital">noctámbulos</span>'
+      ],
+      work_tags: ['Producto · Marca','Identidad · Packaging','Editorial · Web','Marca · E-commerce','Producto · Movimiento','Identidad · Web'],
+      service_titles: ['Sistemas de <span class="ital">marca</span>','<span class="ital">Sitios web</span> con buen carácter','Oficio de <span class="ital">producto</span>'],
+      service_descs: [
+        'Naming, logos, tipografía, color, voz — el kit completo. Diseñados para crecer contigo, y para sentirse específicos, no genéricos.',
+        'Editoriales, expresivos, accesibles. Entregados en Webflow, Framer o código a mano — lo que mejor sirva al trabajo y al equipo que lo mantenga.',
+        'UX, interacción e interfaz — normalmente para productos en etapas tempranas que buscan una voz sin perder legibilidad.'
+      ],
+      service_lists: [
+        ['— Identidad y manuales','— Sistemas tipo y color','— Packaging e impreso'],
+        ['— Sitios de marketing','— Portfolios y case studies','— Webflow / Framer'],
+        ['— UI de app y dashboard','— Sistemas de diseño','— Prototipos']
+      ],
+      tweaks: { title:'Ajustes', lang:'Idioma', name:'Tu nombre', role:'Rol', loc:'Ubicación', accent:'Color de acento', paper:'Tono del papel', marquee:'Mostrar franja marquesina', cursor:'Cursor personalizado', italic:'Acentos en itálica' },
+      marquee: '<em class="ital">Sistemas de marca</em> <span class="star">✦</span> Diseño editorial <span class="star">✦</span> <em class="ital">Sitios web</em> con buen comportamiento <span class="star">✦</span> Dirección de arte <span class="star">✦</span> Identidades <em class="ital">tipográficas</em> <span class="star">✦</span> Diseño de interacción <span class="star">✦</span>',
+      email_user: 'hola'
+    },
+    en: {
+      nav_work: 'Work', nav_about: 'About', nav_services: 'Services', nav_contact: 'Contact',
+      nav_cta: 'Available May 2026',
+      meta_index: 'Index', meta_practice: 'Practice', meta_based: 'Based in', meta_status: 'Status', meta_status_val: 'Open for spring',
+      hero_l1: 'Designing with', hero_l2a: 'patience', hero_l3: 'a little mischief.',
+      hero_arrow: 'a quiet corner<br>of the internet',
+      portrait_tag: 'PORTRAIT · 4x5', portrait_ph: 'place photograph here · 1100 × 1400',
+      about_label: '(About) — 02',
+      fact_1: 'years working with founders, agencies & in-house teams',
+      fact_2: 'brands, products and editorial projects shipped',
+      fact_3: 'clients taken on per year — deep work over volume',
+      work_meta: '2022 — 2026 · Index of 12',
+      preview_ph: 'project preview · replace with image',
+      services_meta: '(Services) — 03',
+      quote_cite: '— Mira Osei, Founder @ Verdant',
+      contact_label: '(04) — Say hello',
+      footer_c: '© 2022 — 2026 · Pymen Studio',
+      footer_tag: 'made slow, on purpose',
+      footer_loc: 'Lisbon / Remote',
+      hero_blurb: 'I’m <em id="b-name">__NAME__</em> — a freelance designer helping founders and small teams shape brands that <em>feel handmade</em>, and products that don’t apologize for having a personality.',
+      about_body: '<p>I’ve spent the last <strong>eight years</strong> making things on the internet — at studios, at startups, and now on my own.</p><p>I care about <em>craft</em>, but I care more about the humans on the other side of the screen. A brand is a promise; a product is a habit. Both deserve warmth.</p><p>Currently partnering with a handful of clients a year. <em>Slow by design.</em></p>',
+      work_head: 'Selected <em>work</em>',
+      services_head: 'How I can <em>help</em>',
+      quote_body: 'She treated our scrappy startup like an <em>editorial project</em> — we ended up with a brand our customers actually <em>quote back</em> to us.',
+      contact_sub: 'Taking on two new projects for <strong>May</strong> and <strong>July</strong>. Send a short note about what you’re making, and we’ll find time to talk.',
+      work_titles: [
+        'Soft Hours, a journaling app for <span class="ital">slow thinkers</span>',
+        'Verdant — the <span class="ital">botanical</span> grocery',
+        'The Midnight Press, a <span class="ital">weekly</span> letter',
+        'Kiln &amp; Co. — ceramics with <span class="ital">opinions</span>',
+        'Folk Money — friendlier <span class="ital">finance</span>',
+        'Warmline, a radio station for <span class="ital">night owls</span>'
+      ],
+      work_tags: ['Product · Brand','Identity · Packaging','Editorial · Web','Brand · E-commerce','Product · Motion','Identity · Web'],
+      service_titles: ['Brand <span class="ital">systems</span>','<span class="ital">Websites</span> that behave','Product <span class="ital">craft</span>'],
+      service_descs: [
+        'Naming, logos, type, color, voice — the full kit. Designed to stretch as you grow, and to feel specific, not generic.',
+        'Editorial, expressive, accessible. Shipped in Webflow, Framer, or hand-coded — whichever fits the job and the team that comes after me.',
+        'UX, interaction, and UI — usually for early-stage products trying to find a voice without losing legibility.'
+      ],
+      service_lists: [
+        ['— Identity & guidelines','— Type & color systems','— Packaging & print'],
+        ['— Marketing sites','— Portfolios & case studies','— Webflow / Framer'],
+        ['— App & dashboard UI','— Design systems','— Prototypes']
+      ],
+      tweaks: { title:'Tweaks', lang:'Language', name:'Your name', role:'Role', loc:'Location', accent:'Accent color', paper:'Paper tone', marquee:'Show marquee band', cursor:'Custom cursor', italic:'Italic display accents' },
+      marquee: '<em class="ital">Brand systems</em> <span class="star">✦</span> Editorial design <span class="star">✦</span> <em class="ital">Websites</em> that behave <span class="star">✦</span> Art direction <span class="star">✦</span> <em class="ital">Type-led</em> identities <span class="star">✦</span> Interaction design <span class="star">✦</span>',
+      email_user: 'hello'
+    }
+  };
+
+  function applyLang(l) {
+    const t = i18n[l]; if (!t) return;
+    document.documentElement.lang = l;
+    // data-i18n plain
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (t[k] != null) el.innerHTML = t[k];
+    });
+    // rich
+    const blurb = document.getElementById('hero-blurb');
+    if (blurb) blurb.innerHTML = t.hero_blurb.replace('__NAME__', (state.name.split(' ')[0] || 'Pymen'));
+    const about = document.getElementById('about-body');
+    if (about) about.innerHTML = t.about_body;
+    const wh = document.getElementById('work-head'); if (wh) wh.innerHTML = t.work_head;
+    const sh = document.getElementById('services-head'); if (sh) sh.innerHTML = t.services_head;
+    const qb = document.getElementById('quote-body'); if (qb) qb.innerHTML = t.quote_body;
+    const cs = document.getElementById('contact-sub'); if (cs) cs.innerHTML = t.contact_sub;
+    // work rows
+    document.querySelectorAll('.work__row').forEach((r, i) => {
+      const title = r.querySelector('.work__title'); if (title && t.work_titles[i]) title.innerHTML = t.work_titles[i];
+      const tag = r.querySelector('.work__tag'); if (tag && t.work_tags[i]) tag.textContent = t.work_tags[i];
+    });
+    // services
+    document.querySelectorAll('.service').forEach((s, i) => {
+      const title = s.querySelector('.service__title'); if (title && t.service_titles[i]) title.innerHTML = t.service_titles[i];
+      const desc = s.querySelector('.service__desc'); if (desc && t.service_descs[i]) desc.textContent = t.service_descs[i];
+      const list = s.querySelector('.service__list');
+      if (list && t.service_lists[i]) list.innerHTML = t.service_lists[i].map(x=>`<span>${x}</span>`).join('');
+    });
+    // marquee
+    document.querySelectorAll('.marquee-copy').forEach(el => {
+      el.innerHTML = t.marquee;
+    });
+    // contact email localized user
+    const email = document.querySelector('.contact__email');
+    if (email) {
+      email.innerHTML = `${t.email_user}<span style="color: var(--accent); font-style: italic;">@</span>pymen.studio`;
+      email.href = `mailto:${t.email_user}@pymen.studio`;
+    }
+    // tweaks labels
+    const tw = t.tweaks;
+    const qT = document.querySelector('.tweaks h3'); if (qT) qT.textContent = tw.title;
+    const labels = document.querySelectorAll('.tweaks > label');
+    if (labels[0]) labels[0].childNodes[0].nodeValue = tw.lang + ' ';
+    if (labels[1]) labels[1].childNodes[0].nodeValue = tw.name + ' ';
+    if (labels[2]) labels[2].childNodes[0].nodeValue = tw.role + ' ';
+    if (labels[3]) labels[3].childNodes[0].nodeValue = tw.loc + ' ';
+    if (labels[4]) labels[4].childNodes[0].nodeValue = tw.accent + ' ';
+    if (labels[5]) labels[5].childNodes[0].nodeValue = tw.paper + ' ';
+    const rows = document.querySelectorAll('.tweaks .row');
+    if (rows[0]) rows[0].childNodes[1].nodeValue = ' ' + tw.marquee;
+    if (rows[1]) rows[1].childNodes[1].nodeValue = ' ' + tw.cursor;
+    if (rows[2]) rows[2].childNodes[1].nodeValue = ' ' + tw.italic;
+    // lang button active state
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.l === l));
+    // update title
+    document.title = l === 'es' ? 'Pymen — Diseñadora independiente' : 'Pymen — Independent designer';
+  }
+
+  // ---------- apply initial tweaks ----------
+  const state = { ...TWEAKS };
+
+  function apply() {
+    document.documentElement.style.setProperty('--accent', state.accent);
+    document.documentElement.style.setProperty('--paper', state.paper);
+    // derived paper-2
+    const dark = state.paper === '#1A1714';
+    if (dark) {
+      document.documentElement.style.setProperty('--paper-2', '#252017');
+      document.documentElement.style.setProperty('--ink', '#F2EADC');
+      document.documentElement.style.setProperty('--ink-soft', '#BFB6A4');
+      document.documentElement.style.setProperty('--ink-faint', '#7E7665');
+      document.documentElement.style.setProperty('--rule', 'rgba(242,234,220,0.18)');
+      document.documentElement.style.setProperty('--rule-soft', 'rgba(242,234,220,0.08)');
+    } else {
+      const p2map = { '#F2EADC':'#EADFCB','#EFE8DD':'#E7DDCB','#F5F1E8':'#EDE7D8','#E8E3D6':'#DCD6C5' };
+      document.documentElement.style.setProperty('--paper-2', p2map[state.paper] || '#EADFCB');
+      document.documentElement.style.setProperty('--ink', '#1A1714');
+      document.documentElement.style.setProperty('--ink-soft', '#4A433C');
+      document.documentElement.style.setProperty('--ink-faint', '#8A8276');
+      document.documentElement.style.setProperty('--rule', 'rgba(26,23,20,0.16)');
+      document.documentElement.style.setProperty('--rule-soft', 'rgba(26,23,20,0.08)');
+    }
+
+    // name/role/loc
+    const firstName = state.name.split(' ')[0];
+    document.getElementById('nav-name').textContent = state.name;
+    document.getElementById('b-name').textContent = firstName;
+    document.getElementById('m-role').textContent = state.role.length > 28 ? state.role.slice(0,28)+'…' : state.role;
+    document.getElementById('m-loc').textContent = state.location;
+
+    // marquee
+    document.getElementById('marquee-wrap').style.display = state.showMarquee ? '' : 'none';
+
+    // cursor
+    const cursor = document.getElementById('cursor');
+    if (state.showCursor && window.matchMedia('(pointer: fine)').matches) {
+      cursor.classList.add('show');
+    } else {
+      cursor.classList.remove('show');
+    }
+
+    // italic accents
+    document.body.classList.toggle('no-italic', !state.italicDisplay);
+
+    // swatches
+    document.querySelectorAll('#t-sw .sw').forEach(el => {
+      el.classList.toggle('active', el.dataset.c === state.accent);
+    });
+    document.querySelectorAll('#t-paper .sw').forEach(el => {
+      el.classList.toggle('active', el.dataset.c === state.paper);
+    });
+    applyLang(state.lang || 'es');
+  }
+
+  // wire tweak inputs
+  document.getElementById('t-name').value = state.name;
+  document.getElementById('t-role').value = state.role;
+  document.getElementById('t-loc').value = state.location;
+  document.getElementById('t-marquee').checked = state.showMarquee;
+  document.getElementById('t-cursor').checked = state.showCursor;
+  document.getElementById('t-italic').checked = state.italicDisplay;
+
+  function post(edits) {
+    Object.assign(state, edits);
+    apply();
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*'); } catch(e) {}
+  }
+
+  document.getElementById('t-name').addEventListener('input', e => post({ name: e.target.value }));
+  document.getElementById('t-role').addEventListener('input', e => post({ role: e.target.value }));
+  document.getElementById('t-loc').addEventListener('input', e => post({ location: e.target.value }));
+  document.getElementById('t-marquee').addEventListener('change', e => post({ showMarquee: e.target.checked }));
+  document.getElementById('t-cursor').addEventListener('change', e => post({ showCursor: e.target.checked }));
+  document.getElementById('t-italic').addEventListener('change', e => post({ italicDisplay: e.target.checked }));
+  document.querySelectorAll('#t-sw .sw').forEach(el => {
+    el.addEventListener('click', () => post({ accent: el.dataset.c }));
+  });
+  document.querySelectorAll('#t-paper .sw').forEach(el => {
+    el.addEventListener('click', () => post({ paper: el.dataset.c }));
+  });
+  document.querySelectorAll('.lang-btn').forEach(el => {
+    el.addEventListener('click', () => post({ lang: el.dataset.l }));
+  });
+
+  // edit-mode protocol: listener FIRST, then announce
+  window.addEventListener('message', (e) => {
+    const d = e.data || {};
+    if (d.type === '__activate_edit_mode') document.getElementById('tweaks').classList.add('show');
+    if (d.type === '__deactivate_edit_mode') document.getElementById('tweaks').classList.remove('show');
+  });
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
+
+  apply();
+
+  // ---------- scroll reveal ----------
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => io.observe(el));
+
+  // ---------- work preview follow ----------
+  const preview = document.getElementById('preview');
+  const previewPh = preview.querySelector('.ph');
+  const rows = document.querySelectorAll('.work__row');
+  const titles = {
+    es: ['Soft Hours · producto','Verdant · packaging','Midnight Press · portada','Kiln & Co · lookbook','Folk Money · UI','Warmline · identidad'],
+    en: ['Soft Hours · product shot','Verdant · packaging','Midnight Press · cover','Kiln & Co · lookbook','Folk Money · UI','Warmline · identity']
+  };
+  rows.forEach((row, i) => {
+    row.addEventListener('mouseenter', () => {
+      preview.classList.add('active');
+      const v = row.dataset.preview;
+      previewPh.className = 'ph v' + v;
+      const arr = titles[state.lang] || titles.es;
+      previewPh.textContent = arr[i] || 'preview';
+    });
+    row.addEventListener('mouseleave', () => preview.classList.remove('active'));
+    row.addEventListener('mousemove', (e) => {
+      const x = e.clientX + 24;
+      const y = e.clientY - 150;
+      preview.style.left = Math.min(window.innerWidth - 260, x) + 'px';
+      preview.style.top = Math.max(80, y) + 'px';
+    });
+  });
+
+  // ---------- cursor ----------
+  const cursor = document.getElementById('cursor');
+  let cx = 0, cy = 0, tx = 0, ty = 0;
+  document.addEventListener('mousemove', (e) => { tx = e.clientX; ty = e.clientY; });
+  function tick() {
+    cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
+    cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+    requestAnimationFrame(tick);
+  }
+  tick();
+  document.querySelectorAll('a, .work__row, .service, .sw, button, input, .nav__cta').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  });
+
+  // ---------- marquee hover pause ----------
+  const track = document.getElementById('marquee-track');
+  document.getElementById('marquee-wrap').addEventListener('mouseenter', () => track.classList.add('paused'));
+  document.getElementById('marquee-wrap').addEventListener('mouseleave', () => track.classList.remove('paused'));
+})();
+</script>
+
+</body>
+</html>
