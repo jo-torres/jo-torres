@@ -1,628 +1,506 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pymen — Diseñadora independiente</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jo Torres — Plataformas web con IA para PYMEs</title>
+<meta name="description" content="Diseño plataformas web con IA para PYMEs que quieren modernizar su servicio sin tecnicismos ni sorpresas. 20 años de experiencia en UX.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script>
-const TWEAKS = /*EDITMODE-BEGIN*/{
-  "name": "Jo Torres",
-  "role": "Digital Project Manager | UX/UI",
-  "location": "Santiago, Chile",
-  "accent": "#C8502A",
-  "paper": "#F2EADC",
-  "ink": "#1A1714",
-  "theme": "warm",
-  "showMarquee": true,
-  "showCursor": true,
-  "italicDisplay": true,
-  "lang": "es"
-}/*EDITMODE-END*/;
-</script>
-<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles__css.css">
 </head>
 <body>
 
-<!-- cursor -->
-<div class="cursor" id="cursor"></div>
-
-<!-- nav -->
-<nav class="nav">
-  <div class="nav__mark">
-    <div class="nav__dot"></div>
-    <div class="nav__name" id="nav-name">Jo Torres</div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Jo Torres<span>UX</span></div>
+  <div class="nav-links">
+    <a href="#flujo">Sobre mí</a>
+    <a href="#para-quien">Para quién</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#como-funciona">Cuéntame de tu negocio</a>
   </div>
-  <div class="nav__links">
-    <a href="#work" data-i18n="nav_work">Proyectos</a>
-    <a href="#about" data-i18n="nav_about">Sobre mí</a>
-    <a href="#services" data-i18n="nav_services">Servicios</a>
-    <a href="#contact" data-i18n="nav_contact">Contacto</a>
-  </div>
-  <a href="#contact" class="nav__cta"><span class="pulse"></span> <span data-i18n="nav_cta">Disponible en mayo 2026</span></a>
+  <a href="#formulario" class="nav-cta">Conversemos →</a>
 </nav>
 
-<main class="wrap">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__meta mono">
-      <div><span data-i18n="meta_index">Índice</span><strong>01 / Portfolio '26</strong></div>
-      <div><span data-i18n="meta_practice">Práctica</span><strong id="m-role">Marca e interacción</strong></div>
-      <div><span data-i18n="meta_based">Ubicación</span><strong id="m-loc">Lisboa, PT · UTC+0</strong></div>
-      <div><span data-i18n="meta_status">Estado</span><strong style="color: var(--accent);" data-i18n="meta_status_val">Abierta para primavera</strong></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-name">JO TORRES</div>
+  <div class="hero-eyebrow">Plataformas web con IA para PYMEs · 20 años diseñando experiencias digitales</div>
+  <h1>¿Quieres incorporar IA a tu negocio pero no sabes <em>por dónde empezar</em>?</h1>
+  <p class="hero-sub">Diseño plataformas web con IA para PYMEs que quieren modernizar su servicio sin tecnicismos ni sorpresas. Atiende 24/7, automatiza lo repetitivo y enfócate en lo que solo tú puedes hacer.</p>
+  <div class="hero-actions">
+    <a href="#formulario" class="btn-primary">Conversemos sobre tu negocio →</a>
+    <a href="#como-funciona" class="btn-ghost">Ver cómo funciona</a>
+  </div>
+  <div class="hero-trust">
+    <div class="trust-item">
+      <div class="trust-num">20+</div>
+      <div class="trust-label">Años de experiencia</div>
     </div>
-
-    <h1 class="hero__headline">
-      <span class="line"><span class="reveal" data-i18n="hero_l1">Diseñando con</span></span>
-      <span class="line"><span class="reveal"><span class="ital" data-i18n="hero_l2a">paciencia</span> <span class="ampersand">&amp;</span></span></span>
-      <span class="line"><span class="reveal" data-i18n="hero_l3">un poco de travesura.</span></span>
-    </h1>
-
-    <div class="hero__arrow">
-      <span data-i18n="hero_arrow">un rincón tranquilo<br>del internet</span>
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 6 Q 20 30, 34 20 M 34 20 L 26 14 M 34 20 L 28 28" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+    <div class="trust-item">
+      <div class="trust-num">48h</div>
+      <div class="trust-label">Tiempo de respuesta</div>
     </div>
-
-    <div class="hero__bottom">
-      <p class="hero__blurb" id="hero-blurb">
-        Soy <em id="b-name">Pymen</em> — diseñadora freelance que ayuda a fundadores y equipos pequeños a construir marcas que <em>se sienten hechas a mano</em>, y productos que no piden perdón por tener personalidad.
-      </p>
-      <div class="hero__portrait">
-        <div class="tag" data-i18n="portrait_tag">RETRATO · 4x5</div>
-        <div class="ph" data-i18n="portrait_ph">coloca fotografía aquí · 1100 × 1400</div>
-      </div>
+    <div class="trust-item">
+      <div class="trust-num">100%</div>
+      <div class="trust-label">Precio cerrado</div>
     </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee" id="marquee-wrap">
-    <div class="marquee__track" id="marquee-track">
-      <span class="marquee-copy">
-        <em class="ital">Sistemas de marca</em> <span class="star">✦</span>
-        Diseño editorial <span class="star">✦</span>
-        <em class="ital">Sitios web</em> con buen comportamiento <span class="star">✦</span>
-        Dirección de arte <span class="star">✦</span>
-        Identidades <em class="ital">tipográficas</em> <span class="star">✦</span>
-        Diseño de interacción <span class="star">✦</span>
-      </span>
-      <span class="marquee-copy" aria-hidden="true">
-        <em class="ital">Sistemas de marca</em> <span class="star">✦</span>
-        Diseño editorial <span class="star">✦</span>
-        <em class="ital">Sitios web</em> con buen comportamiento <span class="star">✦</span>
-        Dirección de arte <span class="star">✦</span>
-        Identidades <em class="ital">tipográficas</em> <span class="star">✦</span>
-        Diseño de interacción <span class="star">✦</span>
-      </span>
+    <div class="trust-item">
+      <div class="trust-num">0</div>
+      <div class="trust-label">Sorpresas en el camino</div>
     </div>
   </div>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about__grid">
-      <div class="about__label mono" data-i18n="about_label">(Sobre mí) — 02</div>
-      <div class="about__body reveal-on-scroll" id="about-body">
-        <p>He pasado los últimos <strong>ocho años</strong> haciendo cosas en internet — en estudios, en startups, y ahora por mi cuenta.</p>
-        <p>Me importa el <em>oficio</em>, pero me importan más las personas al otro lado de la pantalla. Una marca es una promesa; un producto es un hábito. Ambos merecen calidez.</p>
-        <p>Actualmente colaboro con un puñado de clientes al año. <em>Lento a propósito.</em></p>
-      </div>
-    </div>
-
-    <div class="about__facts reveal-on-scroll">
-      <div>
-        <div class="fact__num">08<span class="ital">+</span></div>
-        <div class="fact__label" data-i18n="fact_1">años trabajando con fundadores, agencias y equipos internos</div>
-      </div>
-      <div>
-        <div class="fact__num">42</div>
-        <div class="fact__label" data-i18n="fact_2">marcas, productos y proyectos editoriales entregados</div>
-      </div>
-      <div>
-        <div class="fact__num"><span class="ital">4</span> / año</div>
-        <div class="fact__label" data-i18n="fact_3">clientes por año — profundidad antes que volumen</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK -->
-  <section class="work" id="work">
-    <div class="section-head">
-      <h2 id="work-head">Proyectos <em>seleccionados</em></h2>
-      <div class="mono" data-i18n="work_meta">2022 — 2026 · Índice de 12</div>
-    </div>
-
-    <ul class="work__list" id="work-list">
-      <li class="work__row" data-preview="1">
-        <div class="work__idx">01</div>
-        <div class="work__title">Soft Hours, una app de diario para <span class="ital">pensadores lentos</span></div>
-        <div class="work__tag">Producto · Marca</div>
-        <div class="work__year">2026</div>
-        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
-      </li>
-      <li class="work__row" data-preview="2">
-        <div class="work__idx">02</div>
-        <div class="work__title">Verdant — la tienda <span class="ital">botánica</span> de barrio</div>
-        <div class="work__tag">Identidad · Packaging</div>
-        <div class="work__year">2025</div>
-        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
-      </li>
-      <li class="work__row" data-preview="3">
-        <div class="work__idx">03</div>
-        <div class="work__title">The Midnight Press, una carta <span class="ital">semanal</span></div>
-        <div class="work__tag">Editorial · Web</div>
-        <div class="work__year">2025</div>
-        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
-      </li>
-      <li class="work__row" data-preview="4">
-        <div class="work__idx">04</div>
-        <div class="work__title">Kiln &amp; Co. — cerámica con <span class="ital">carácter</span></div>
-        <div class="work__tag">Marca · E-commerce</div>
-        <div class="work__year">2024</div>
-        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
-      </li>
-      <li class="work__row" data-preview="5">
-        <div class="work__idx">05</div>
-        <div class="work__title">Folk Money — <span class="ital">finanzas</span> con calidez</div>
-        <div class="work__tag">Producto · Movimiento</div>
-        <div class="work__year">2024</div>
-        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
-      </li>
-      <li class="work__row" data-preview="1">
-        <div class="work__idx">06</div>
-        <div class="work__title">Warmline, una radio para <span class="ital">noctámbulos</span></div>
-        <div class="work__tag">Identidad · Web</div>
-        <div class="work__year">2023</div>
-        <div class="work__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 L13 3 M13 3 H6 M13 3 V10" stroke="currentColor" stroke-width="1.2"/></svg></div>
-      </li>
-    </ul>
-
-    <div class="work__preview" id="preview">
-      <div class="ph" data-i18n="preview_ph">vista previa del proyecto · reemplaza con imagen</div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="section-head">
-      <h2 id="services-head">En qué puedo <em>ayudarte</em></h2>
-      <div class="mono" data-i18n="services_meta">(Servicios) — 03</div>
-    </div>
-
-    <div class="services__grid">
-      <div class="service">
-        <div>
-          <div class="service__num">(01)</div>
-          <div class="service__title">Sistemas de <span class="ital">marca</span></div>
-          <div class="service__desc">Naming, logos, tipografía, color, voz — el kit completo. Diseñados para crecer contigo, y para sentirse específicos, no genéricos.</div>
-        </div>
-        <div class="service__list">
-          <span>— Identidad y manuales</span>
-          <span>— Sistemas tipo y color</span>
-          <span>— Packaging e impreso</span>
-        </div>
-      </div>
-      <div class="service">
-        <div>
-          <div class="service__num">(02)</div>
-          <div class="service__title"><span class="ital">Sitios web</span> con buen carácter</div>
-          <div class="service__desc">Editoriales, expresivos, accesibles. Entregados en Webflow, Framer o código a mano — lo que mejor sirva al trabajo y al equipo que lo mantenga.</div>
-        </div>
-        <div class="service__list">
-          <span>— Sitios de marketing</span>
-          <span>— Portfolios y case studies</span>
-          <span>— Webflow / Framer</span>
-        </div>
-      </div>
-      <div class="service">
-        <div>
-          <div class="service__num">(03)</div>
-          <div class="service__title">Oficio de <span class="ital">producto</span></div>
-          <div class="service__desc">UX, interacción e interfaz — normalmente para productos en etapas tempranas que buscan una voz sin perder legibilidad.</div>
-        </div>
-        <div class="service__list">
-          <span>— UI de app y dashboard</span>
-          <span>— Sistemas de diseño</span>
-          <span>— Prototipos</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="quote">
-    <div class="quote__mark">“</div>
-    <div class="quote__body" id="quote-body">
-      Trató a nuestra startup como un <em>proyecto editorial</em> — terminamos con una marca que nuestros clientes nos <em>citan de vuelta</em>.
-    </div>
-    <div class="quote__cite" data-i18n="quote_cite">— Mira Osei, fundadora de Verdant</div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact__label" data-i18n="contact_label">(04) — Saluda</div>
-    <a href="/cdn-cgi/l/email-protection#41292e2d200131382c242f6f32353425282e" class="contact__email">hola<span style="color: var(--accent); font-style: italic;">@</span>pymen.studio</a>
-    <div class="contact__sub" id="contact-sub">
-      Acepto dos proyectos nuevos para <strong>mayo</strong> y <strong>julio</strong>. Escíbeme una nota corta sobre lo que estás haciendo y encontraremos tiempo para hablar.
-    </div>
-    <div class="contact__socials">
-      <a href="#">Are.na</a>
-      <a href="#">Instagram</a>
-      <a href="#">Read.cv</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div data-i18n="footer_c">© 2022 — 2026 · Pymen Studio</div>
-  <div class="footer__big serif italic" style="font-style: italic;" data-i18n="footer_tag">hecho despacio, a propósito</div>
-  <div data-i18n="footer_loc">Lisboa / Remoto</div>
-</footer>
-
-<!-- TWEAKS PANEL -->
-<div class="tweaks" id="tweaks">
-  <h3>Ajustes</h3>
-
-  <label>Idioma
-    <div class="swatches" id="t-lang" style="gap: 8px;">
-      <button type="button" class="lang-btn" data-l="es">ES</button>
-      <button type="button" class="lang-btn" data-l="en">EN</button>
-    </div>
-  </label>
-
-  <label>Tu nombre
-    <input type="text" id="t-name" />
-  </label>
-  <label>Rol
-    <input type="text" id="t-role" />
-  </label>
-  <label>Ubicación
-    <input type="text" id="t-loc" />
-  </label>
-
-  <label style="margin-top: 6px;">Color de acento
-    <div class="swatches" id="t-sw">
-      <div class="sw" data-c="#C8502A" style="background: #C8502A"></div>
-      <div class="sw" data-c="#2E5339" style="background: #2E5339"></div>
-      <div class="sw" data-c="#3B4DA0" style="background: #3B4DA0"></div>
-      <div class="sw" data-c="#B8475E" style="background: #B8475E"></div>
-      <div class="sw" data-c="#8A6A3B" style="background: #8A6A3B"></div>
-      <div class="sw" data-c="#1A1714" style="background: #1A1714"></div>
-    </div>
-  </label>
-
-  <label style="margin-top: 10px;">Tono del papel
-    <div class="swatches" id="t-paper">
-      <div class="sw" data-c="#F2EADC" style="background: #F2EADC"></div>
-      <div class="sw" data-c="#EFE8DD" style="background: #EFE8DD"></div>
-      <div class="sw" data-c="#F5F1E8" style="background: #F5F1E8"></div>
-      <div class="sw" data-c="#E8E3D6" style="background: #E8E3D6"></div>
-      <div class="sw" data-c="#1A1714" style="background: #1A1714"></div>
-    </div>
-  </label>
-
-  <div class="row" style="margin-top: 14px;"><input type="checkbox" id="t-marquee" /> Mostrar franja marquesina</div>
-  <div class="row"><input type="checkbox" id="t-cursor" /> Cursor personalizado</div>
-  <div class="row"><input type="checkbox" id="t-italic" /> Acentos en itálica</div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<!-- PARA QUIÉN -->
+<section id="para-quien">
+  <div class="section-tag reveal">Para quién</div>
+  <h2 class="section-title reveal">Para PYMEs que están listas para dar el <em>salto digital</em></h2>
+  <p class="section-body reveal">Trabajo con dueños y dueñas de negocios que ya tienen clientes, ya tienen flujo, y entienden que la próxima etapa de crecimiento pasa por la tecnología — pero no quieren depender de tecnicismos ni gastar de más para llegar ahí.</p>
+  <div class="personas-grid reveal">
+    <div class="persona-card">
+      <div class="persona-num">01</div>
+      <h3>Profesionales que viven de su tiempo</h3>
+      <p>Estudios de abogados, contadores, consultores, terapeutas. Pasas horas respondiendo las mismas preguntas y agendando citas. Una web con IA puede filtrar lo básico y dejarte concentrar en el trabajo que solo tú puedes hacer.</p>
+    </div>
+    <div class="persona-card">
+      <div class="persona-num">02</div>
+      <h3>Negocios de servicios con muchas consultas diarias</h3>
+      <p>Clínicas, escuelas, gimnasios, inmobiliarias, agencias de viajes. Recibes las mismas preguntas todo el día por WhatsApp, mail y teléfono. Un asistente con IA en tu web responde lo simple y te entrega solo lo que necesita atención humana.</p>
+    </div>
+    <div class="persona-card">
+      <div class="persona-num">03</div>
+      <h3>Comercios y PYMEs que quieren modernizar su web</h3>
+      <p>Tu sitio tiene varios años o nunca cumplió lo que esperabas. Quieres una web actual, que trabaje 24/7 y que no te obligue a depender de WhatsApp para todo. La IA puede ser parte de la solución, sin volver el sitio complicado.</p>
+    </div>
+    <div class="persona-card">
+      <div class="persona-num">04</div>
+      <h3>Emprendedores que quieren crecer sin contratar todavía</h3>
+      <p>Tu negocio funciona pero estás al límite. Antes de sumar empleados quieres ver hasta dónde te puede llevar la tecnología bien usada. Sin perder el trato cercano que te trajo hasta acá.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-tag reveal">Servicios</div>
+  <h2 class="section-title reveal">Tres formas de <em>trabajar contigo</em></h2>
+  <p class="section-body reveal">Tres paquetes cerrados, con precio claro y entregables concretos. Sin retainers eternos ni costos sorpresa. Empezamos por lo que tu negocio realmente necesita hoy.</p>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-badge">Diagnóstico</div>
+      <h3>¿Qué IA necesita tu negocio?</h3>
+      <p>Reviso tu negocio, tus consultas más frecuentes y tus procesos. Te entrego un mapa claro: qué funciones de IA aportan valor real a tu caso, en qué orden conviene implementarlas, y un presupuesto realista para hacerlo.</p>
+      <ul class="service-includes">
+        <li>Revisión de tu sitio actual y procesos</li>
+        <li>Análisis de tus consultas más frecuentes</li>
+        <li>Mapa priorizado de oportunidades de IA</li>
+        <li>Presupuesto realista por etapa</li>
+        <li>Informe en Loom + documento escrito</li>
+      </ul>
+      <div class="service-price">Entrega en 1 semana · Precio cerrado</div>
+    </div>
+    <div class="service-card featured">
+      <div class="service-badge">Más solicitado</div>
+      <h3>Plataforma web con IA</h3>
+      <p>Tu nueva web inteligente, lista en 6 semanas. Diseño y entrega de tu sitio con la capa de IA ya integrada: asistente de consultas, automatizaciones, agendamiento — lo que tu negocio realmente necesite.</p>
+      <ul class="service-includes">
+        <li>Diseño completo del sitio</li>
+        <li>Integración del asistente con IA</li>
+        <li>Automatizaciones a medida</li>
+        <li>Capacitación para que lo manejes</li>
+        <li>1 mes de soporte incluido</li>
+      </ul>
+      <div class="service-price">6 semanas · Precio cerrado · Pago por hitos</div>
+    </div>
+    <div class="service-card">
+      <div class="service-badge">Suma IA</div>
+      <h3>IA para tu web actual</h3>
+      <p>Tu sitio funciona, solo necesita el siguiente paso. Para PYMEs que ya tienen web y solo quieren incorporar un asistente con IA u otra automatización puntual, sin rehacer todo desde cero.</p>
+      <ul class="service-includes">
+        <li>Asistente con IA conectado a tu sitio</li>
+        <li>Configuración con la voz de tu marca</li>
+        <li>Integración con correo o WhatsApp</li>
+        <li>Capacitación para tu equipo</li>
+      </ul>
+      <div class="service-price">2 a 3 semanas · Precio cerrado</div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="section-tag reveal">Proceso</div>
+  <h2 class="section-title reveal">Un proceso simple, sin <em>fricciones innecesarias</em></h2>
+  <div class="steps-layout reveal">
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-n">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Cuéntame de tu negocio</h4>
+          <p>Llenas un formulario corto. Me cuentas a qué te dedicas, qué quieres lograr y dónde te aprieta el zapato hoy. Toma unos 5 minutos.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-n">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Diagnóstico inicial en 48h</h4>
+          <p>Reviso tu situación y te envío una primera mirada por escrito o en video corto. Sin compromiso. Si tiene sentido seguir, agendamos una llamada para conocernos.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-n">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Propuesta clara con precio cerrado</h4>
+          <p>Te paso una propuesta concreta: alcance, plazos, precio y forma de pago por hitos. Cero letra chica. Si algo no calza, lo conversamos.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap">
+          <div class="step-n">4</div>
+        </div>
+        <div class="step-content">
+          <h4>Manos a la obra</h4>
+          <p>Trabajamos en un espacio compartido donde puedes ver el avance todo el tiempo. Recibes tu plataforma o asistente lista para usar, con capacitación incluida.</p>
+        </div>
+      </div>
+    </div>
+    <div class="steps-visual">
+      <div class="visual-label">Así se ve en la práctica</div>
+      <div class="async-diagram">
+        <div class="diagram-row">
+          <div class="d-avatar d-you">Tú</div>
+          <div class="d-bubble you">"Hola Jo, tengo un estudio jurídico. Recibimos como 30 consultas al día por WhatsApp y casi todas son lo mismo. ¿Se puede hacer algo con IA?"</div>
+          <div class="d-time">Lunes 9am</div>
+        </div>
+        <div class="diagram-row" style="justify-content:flex-end;">
+          <div class="d-time">Lunes 3pm</div>
+          <div class="d-bubble me">"Sí, claramente. Te dejo en este Loom 2 alternativas según presupuesto: una más simple sumando un asistente a tu web actual, y una más completa con plataforma nueva. Plazos y precios incluidos."</div>
+          <div class="d-avatar d-me">JT</div>
+        </div>
+        <div class="diagram-row">
+          <div class="d-avatar d-you">Tú</div>
+          <div class="d-bubble you">"La opción 1 me hace más sentido para empezar. ¿Cuándo podemos arrancar?"</div>
+          <div class="d-time">Martes 11am</div>
+        </div>
+        <div class="diagram-row" style="justify-content:flex-end;">
+          <div class="d-time">Martes 4pm</div>
+          <div class="d-bubble me">"Perfecto. Te envío contrato simple y agenda. Si firmas hoy, partimos el lunes y tienes el asistente andando en 3 semanas."</div>
+          <div class="d-avatar d-me">JT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section id="formulario">
+  <div class="section-tag reveal">Conversemos</div>
+  <div class="form-layout reveal">
+    <div class="form-intro">
+      <h2 class="section-title" style="max-width:100%;margin-bottom:1rem;">Cuéntame de tu <em>negocio</em></h2>
+      <p>Este formulario toma unos 5 minutos. Me ayuda a entender tu situación antes de la primera conversación, para que mi respuesta te sirva de verdad desde el primer mensaje.</p>
+      <div class="form-meta">
+        <div class="form-meta-item">Sin compromiso</div>
+        <div class="form-meta-item">Respuesta en 48h hábiles</div>
+        <div class="form-meta-item">100% confidencial</div>
+        <div class="form-meta-item">Sin venderte humo</div>
+      </div>
+    </div>
+    <div class="form-body">
+
+      <!-- PROGRESS -->
+      <div class="form-progress">
+        <div class="form-progress-text">Paso <span id="current-step">1</span> de 4</div>
+        <div class="form-progress-bar">
+          <div class="form-progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- PASO 1: TU NEGOCIO -->
+      <div class="form-step active" data-step="1">
+        <div class="form-section-title">Cuéntame de tu negocio</div>
+
+        <div class="form-group">
+          <label>¿A qué se dedica tu negocio?</label>
+          <span class="form-hint">Una o dos líneas. Como se lo contarías a alguien en una conversación.</span>
+          <textarea placeholder="Ej: Tenemos un estudio jurídico especializado en derecho laboral. Atendemos sobre todo a empresas medianas en Santiago..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>¿Cuántas personas trabajan contigo?</label>
+          <div class="chip-group">
+            <button class="chip">Solo yo</button>
+            <button class="chip active">2 a 5 personas</button>
+            <button class="chip">6 a 15 personas</button>
+            <button class="chip">Más de 15</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 2: TU SITUACIÓN DIGITAL -->
+      <div class="form-step" data-step="2">
+        <div class="form-section-title">Tu situación digital hoy</div>
+
+        <div class="form-group">
+          <label>¿Tienes página web actualmente?</label>
+          <div class="chip-group">
+            <button class="chip">Sí, y funciona bien</button>
+            <button class="chip active">Sí, pero está antigua</button>
+            <button class="chip">No tengo</button>
+            <button class="chip">Solo redes sociales</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>¿Cuántas consultas recibes al día aproximadamente?</label>
+          <span class="form-hint">Suma WhatsApp, mail, teléfono y formularios web.</span>
+          <div class="chip-group">
+            <button class="chip">Menos de 10</button>
+            <button class="chip active">Entre 10 y 30</button>
+            <button class="chip">Entre 30 y 100</button>
+            <button class="chip">Más de 100</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 3: LO QUE QUIERES LOGRAR -->
+      <div class="form-step" data-step="3">
+        <div class="form-section-title">Lo que quieres lograr</div>
+
+        <div class="form-group">
+          <label>¿Qué te gustaría que la IA hiciera por tu negocio?</label>
+          <span class="form-hint">No te preocupes si no sabes exactamente qué es posible. Cuéntalo en tus palabras.</span>
+          <textarea placeholder="Ej: Quiero que alguien (o algo) responda las preguntas básicas que recibimos todos los días — horarios, precios, qué casos tomamos. Y que solo me llegue lo importante..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>¿Qué tipo de servicio crees que necesitas?</label>
+          <div class="chip-group">
+            <button class="chip">Diagnóstico (no estoy seguro/a aún)</button>
+            <button class="chip active">Plataforma web nueva con IA</button>
+            <button class="chip">Sumar IA a mi web actual</button>
+            <button class="chip">No lo sé, ayúdame a decidir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASO 4: CONTACTO -->
+      <div class="form-step" data-step="4">
+        <div class="form-section-title">¿Cómo te contacto?</div>
+
+        <div class="form-group">
+          <label>Tu email de contacto</label>
+          <input type="email" placeholder="tu@negocio.cl" />
+        </div>
+
+        <div class="form-group">
+          <label>¿Cómo prefieres que conversemos primero?</label>
+          <div class="chip-group">
+            <button class="chip active">Email</button>
+            <button class="chip">Llamada por video</button>
+            <button class="chip">WhatsApp</button>
+            <button class="chip">Loom (video corto)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVEGACIÓN -->
+      <div class="form-nav">
+        <button class="btn-back hidden" id="prev-btn" type="button">← Anterior</button>
+        <button class="btn-primary" id="next-btn" type="button">Siguiente →</button>
+        <button class="btn-primary" id="submit-btn" type="button" style="display:none;">Enviar y conversemos →</button>
+      </div>
+
+      <p style="font-size:12px;color:var(--cream-dim);margin-top:1rem;opacity:.7;">Recibirás respuesta en menos de 48 horas hábiles. Sin spam, nunca.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FLUJO DEL CLIENTE -->
+<section id="flujo">
+  <div class="section-tag reveal">Flujo del cliente</div>
+  <h2 class="section-title reveal">Del primer contacto a tu <em>plataforma andando</em></h2>
+  <p class="section-body reveal">Un proceso pensado para que sepas en todo momento dónde estamos parados, qué viene y cuánto cuesta.</p>
+  <div class="flow-timeline reveal">
+    <div class="flow-phases" id="flow-phases"></div>
+    <div class="flow-content" id="flow-content"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Jo Torres<span>UX</span></div>
+  <p>© 2025 · Plataformas web con IA para PYMEs · Santiago, Chile</p>
+  <a href="#formulario" class="btn-primary" style="font-size:12px;padding:10px 20px;">Conversemos →</a>
+</footer>
+
+<script>
+// Form stepper
 (function() {
-  // ---------- i18n ----------
-  const i18n = {
-    es: {
-      nav_work: 'Proyectos', nav_about: 'Sobre mí', nav_services: 'Servicios', nav_contact: 'Contacto',
-      nav_cta: 'Disponible en mayo 2026',
-      meta_index: 'Índice', meta_practice: 'Práctica', meta_based: 'Ubicación', meta_status: 'Estado', meta_status_val: 'Abierta para primavera',
-      hero_l1: 'Diseñando con', hero_l2a: 'paciencia', hero_l3: 'un poco de travesura.',
-      hero_arrow: 'un rincón tranquilo<br>del internet',
-      portrait_tag: 'RETRATO · 4x5', portrait_ph: 'coloca fotografía aquí · 1100 × 1400',
-      about_label: '(Sobre mí) — 02',
-      fact_1: 'años trabajando con fundadores, agencias y equipos internos',
-      fact_2: 'marcas, productos y proyectos editoriales entregados',
-      fact_3: 'clientes por año — profundidad antes que volumen',
-      work_meta: '2022 — 2026 · Índice de 12',
-      preview_ph: 'vista previa del proyecto · reemplaza con imagen',
-      services_meta: '(Servicios) — 03',
-      quote_cite: '— Mira Osei, fundadora de Verdant',
-      contact_label: '(04) — Saluda',
-      footer_c: '© 2022 — 2026 · Pymen Studio',
-      footer_tag: 'hecho despacio, a propósito',
-      footer_loc: 'Lisboa / Remoto',
-      // richHTML
-      hero_blurb: 'Soy <em id="b-name">__NAME__</em> — diseñadora freelance que ayuda a fundadores y equipos pequeños a construir marcas que <em>se sienten hechas a mano</em>, y productos que no piden perdón por tener personalidad.',
-      about_body: '<p>He pasado los <strong>últimos ocho años</strong> haciendo cosas en internet — en estudios, en startups, y ahora por mi cuenta.</p><p>Me importa el <em>oficio</em>, pero me importan más las personas al otro lado de la pantalla. Una marca es una promesa; un producto es un hábito. Ambos merecen calidez.</p><p>Actualmente colaboro con un puñado de clientes al año. <em>Lento a propósito.</em></p>',
-      work_head: 'Proyectos <em>seleccionados</em>',
-      services_head: 'En qué puedo <em>ayudarte</em>',
-      quote_body: 'Trató a nuestra startup como un <em>proyecto editorial</em> — terminamos con una marca que nuestros clientes nos <em>citan de vuelta</em>.',
-      contact_sub: 'Acepto dos proyectos nuevos para <strong>mayo</strong> y <strong>julio</strong>. Escíbeme una nota corta sobre lo que estás haciendo y encontraremos tiempo para hablar.',
-      work_titles: [
-        'Soft Hours, una app de diario para <span class="ital">pensadores lentos</span>',
-        'Verdant — la tienda <span class="ital">botánica</span> de barrio',
-        'The Midnight Press, una carta <span class="ital">semanal</span>',
-        'Kiln &amp; Co. — cerámica con <span class="ital">carácter</span>',
-        'Folk Money — <span class="ital">finanzas</span> con calidez',
-        'Warmline, una radio para <span class="ital">noctámbulos</span>'
-      ],
-      work_tags: ['Producto · Marca','Identidad · Packaging','Editorial · Web','Marca · E-commerce','Producto · Movimiento','Identidad · Web'],
-      service_titles: ['Sistemas de <span class="ital">marca</span>','<span class="ital">Sitios web</span> con buen carácter','Oficio de <span class="ital">producto</span>'],
-      service_descs: [
-        'Naming, logos, tipografía, color, voz — el kit completo. Diseñados para crecer contigo, y para sentirse específicos, no genéricos.',
-        'Editoriales, expresivos, accesibles. Entregados en Webflow, Framer o código a mano — lo que mejor sirva al trabajo y al equipo que lo mantenga.',
-        'UX, interacción e interfaz — normalmente para productos en etapas tempranas que buscan una voz sin perder legibilidad.'
-      ],
-      service_lists: [
-        ['— Identidad y manuales','— Sistemas tipo y color','— Packaging e impreso'],
-        ['— Sitios de marketing','— Portfolios y case studies','— Webflow / Framer'],
-        ['— UI de app y dashboard','— Sistemas de diseño','— Prototipos']
-      ],
-      tweaks: { title:'Ajustes', lang:'Idioma', name:'Tu nombre', role:'Rol', loc:'Ubicación', accent:'Color de acento', paper:'Tono del papel', marquee:'Mostrar franja marquesina', cursor:'Cursor personalizado', italic:'Acentos en itálica' },
-      marquee: '<em class="ital">Sistemas de marca</em> <span class="star">✦</span> Diseño editorial <span class="star">✦</span> <em class="ital">Sitios web</em> con buen comportamiento <span class="star">✦</span> Dirección de arte <span class="star">✦</span> Identidades <em class="ital">tipográficas</em> <span class="star">✦</span> Diseño de interacción <span class="star">✦</span>',
-      email_user: 'hola'
-    },
-    en: {
-      nav_work: 'Work', nav_about: 'About', nav_services: 'Services', nav_contact: 'Contact',
-      nav_cta: 'Available May 2026',
-      meta_index: 'Index', meta_practice: 'Practice', meta_based: 'Based in', meta_status: 'Status', meta_status_val: 'Open for spring',
-      hero_l1: 'Designing with', hero_l2a: 'patience', hero_l3: 'a little mischief.',
-      hero_arrow: 'a quiet corner<br>of the internet',
-      portrait_tag: 'PORTRAIT · 4x5', portrait_ph: 'place photograph here · 1100 × 1400',
-      about_label: '(About) — 02',
-      fact_1: 'years working with founders, agencies & in-house teams',
-      fact_2: 'brands, products and editorial projects shipped',
-      fact_3: 'clients taken on per year — deep work over volume',
-      work_meta: '2022 — 2026 · Index of 12',
-      preview_ph: 'project preview · replace with image',
-      services_meta: '(Services) — 03',
-      quote_cite: '— Mira Osei, Founder @ Verdant',
-      contact_label: '(04) — Say hello',
-      footer_c: '© 2022 — 2026 · Pymen Studio',
-      footer_tag: 'made slow, on purpose',
-      footer_loc: 'Lisbon / Remote',
-      hero_blurb: 'I’m <em id="b-name">__NAME__</em> — a freelance designer helping founders and small teams shape brands that <em>feel handmade</em>, and products that don’t apologize for having a personality.',
-      about_body: '<p>I’ve spent the last <strong>eight years</strong> making things on the internet — at studios, at startups, and now on my own.</p><p>I care about <em>craft</em>, but I care more about the humans on the other side of the screen. A brand is a promise; a product is a habit. Both deserve warmth.</p><p>Currently partnering with a handful of clients a year. <em>Slow by design.</em></p>',
-      work_head: 'Selected <em>work</em>',
-      services_head: 'How I can <em>help</em>',
-      quote_body: 'She treated our scrappy startup like an <em>editorial project</em> — we ended up with a brand our customers actually <em>quote back</em> to us.',
-      contact_sub: 'Taking on two new projects for <strong>May</strong> and <strong>July</strong>. Send a short note about what you’re making, and we’ll find time to talk.',
-      work_titles: [
-        'Soft Hours, a journaling app for <span class="ital">slow thinkers</span>',
-        'Verdant — the <span class="ital">botanical</span> grocery',
-        'The Midnight Press, a <span class="ital">weekly</span> letter',
-        'Kiln &amp; Co. — ceramics with <span class="ital">opinions</span>',
-        'Folk Money — friendlier <span class="ital">finance</span>',
-        'Warmline, a radio station for <span class="ital">night owls</span>'
-      ],
-      work_tags: ['Product · Brand','Identity · Packaging','Editorial · Web','Brand · E-commerce','Product · Motion','Identity · Web'],
-      service_titles: ['Brand <span class="ital">systems</span>','<span class="ital">Websites</span> that behave','Product <span class="ital">craft</span>'],
-      service_descs: [
-        'Naming, logos, type, color, voice — the full kit. Designed to stretch as you grow, and to feel specific, not generic.',
-        'Editorial, expressive, accessible. Shipped in Webflow, Framer, or hand-coded — whichever fits the job and the team that comes after me.',
-        'UX, interaction, and UI — usually for early-stage products trying to find a voice without losing legibility.'
-      ],
-      service_lists: [
-        ['— Identity & guidelines','— Type & color systems','— Packaging & print'],
-        ['— Marketing sites','— Portfolios & case studies','— Webflow / Framer'],
-        ['— App & dashboard UI','— Design systems','— Prototypes']
-      ],
-      tweaks: { title:'Tweaks', lang:'Language', name:'Your name', role:'Role', loc:'Location', accent:'Accent color', paper:'Paper tone', marquee:'Show marquee band', cursor:'Custom cursor', italic:'Italic display accents' },
-      marquee: '<em class="ital">Brand systems</em> <span class="star">✦</span> Editorial design <span class="star">✦</span> <em class="ital">Websites</em> that behave <span class="star">✦</span> Art direction <span class="star">✦</span> <em class="ital">Type-led</em> identities <span class="star">✦</span> Interaction design <span class="star">✦</span>',
-      email_user: 'hello'
-    }
-  };
+  let currentStep = 1;
+  const totalSteps = 4;
+  const steps = document.querySelectorAll('.form-step');
+  const stepIndicator = document.getElementById('current-step');
+  const progressFill = document.getElementById('progress-fill');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const submitBtn = document.getElementById('submit-btn');
 
-  function applyLang(l) {
-    const t = i18n[l]; if (!t) return;
-    document.documentElement.lang = l;
-    // data-i18n plain
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const k = el.getAttribute('data-i18n');
-      if (t[k] != null) el.innerHTML = t[k];
+  function showStep(n) {
+    steps.forEach(s => {
+      s.classList.toggle('active', parseInt(s.dataset.step) === n);
     });
-    // rich
-    const blurb = document.getElementById('hero-blurb');
-    if (blurb) blurb.innerHTML = t.hero_blurb.replace('__NAME__', (state.name.split(' ')[0] || 'Pymen'));
-    const about = document.getElementById('about-body');
-    if (about) about.innerHTML = t.about_body;
-    const wh = document.getElementById('work-head'); if (wh) wh.innerHTML = t.work_head;
-    const sh = document.getElementById('services-head'); if (sh) sh.innerHTML = t.services_head;
-    const qb = document.getElementById('quote-body'); if (qb) qb.innerHTML = t.quote_body;
-    const cs = document.getElementById('contact-sub'); if (cs) cs.innerHTML = t.contact_sub;
-    // work rows
-    document.querySelectorAll('.work__row').forEach((r, i) => {
-      const title = r.querySelector('.work__title'); if (title && t.work_titles[i]) title.innerHTML = t.work_titles[i];
-      const tag = r.querySelector('.work__tag'); if (tag && t.work_tags[i]) tag.textContent = t.work_tags[i];
-    });
-    // services
-    document.querySelectorAll('.service').forEach((s, i) => {
-      const title = s.querySelector('.service__title'); if (title && t.service_titles[i]) title.innerHTML = t.service_titles[i];
-      const desc = s.querySelector('.service__desc'); if (desc && t.service_descs[i]) desc.textContent = t.service_descs[i];
-      const list = s.querySelector('.service__list');
-      if (list && t.service_lists[i]) list.innerHTML = t.service_lists[i].map(x=>`<span>${x}</span>`).join('');
-    });
-    // marquee
-    document.querySelectorAll('.marquee-copy').forEach(el => {
-      el.innerHTML = t.marquee;
-    });
-    // contact email localized user
-    const email = document.querySelector('.contact__email');
-    if (email) {
-      email.innerHTML = `${t.email_user}<span style="color: var(--accent); font-style: italic;">@</span>pymen.studio`;
-      email.href = `mailto:${t.email_user}@pymen.studio`;
-    }
-    // tweaks labels
-    const tw = t.tweaks;
-    const qT = document.querySelector('.tweaks h3'); if (qT) qT.textContent = tw.title;
-    const labels = document.querySelectorAll('.tweaks > label');
-    if (labels[0]) labels[0].childNodes[0].nodeValue = tw.lang + ' ';
-    if (labels[1]) labels[1].childNodes[0].nodeValue = tw.name + ' ';
-    if (labels[2]) labels[2].childNodes[0].nodeValue = tw.role + ' ';
-    if (labels[3]) labels[3].childNodes[0].nodeValue = tw.loc + ' ';
-    if (labels[4]) labels[4].childNodes[0].nodeValue = tw.accent + ' ';
-    if (labels[5]) labels[5].childNodes[0].nodeValue = tw.paper + ' ';
-    const rows = document.querySelectorAll('.tweaks .row');
-    if (rows[0]) rows[0].childNodes[1].nodeValue = ' ' + tw.marquee;
-    if (rows[1]) rows[1].childNodes[1].nodeValue = ' ' + tw.cursor;
-    if (rows[2]) rows[2].childNodes[1].nodeValue = ' ' + tw.italic;
-    // lang button active state
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.l === l));
-    // update title
-    document.title = l === 'es' ? 'Pymen — Diseñadora independiente' : 'Pymen — Independent designer';
+    stepIndicator.textContent = n;
+    progressFill.style.width = (n / totalSteps * 100) + '%';
+
+    prevBtn.classList.toggle('hidden', n === 1);
+    nextBtn.style.display = n === totalSteps ? 'none' : '';
+    submitBtn.style.display = n === totalSteps ? '' : 'none';
+
+    // Scroll to top of form on step change
+    document.getElementById('formulario').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // ---------- apply initial tweaks ----------
-  const state = { ...TWEAKS };
-
-  function apply() {
-    document.documentElement.style.setProperty('--accent', state.accent);
-    document.documentElement.style.setProperty('--paper', state.paper);
-    // derived paper-2
-    const dark = state.paper === '#1A1714';
-    if (dark) {
-      document.documentElement.style.setProperty('--paper-2', '#252017');
-      document.documentElement.style.setProperty('--ink', '#F2EADC');
-      document.documentElement.style.setProperty('--ink-soft', '#BFB6A4');
-      document.documentElement.style.setProperty('--ink-faint', '#7E7665');
-      document.documentElement.style.setProperty('--rule', 'rgba(242,234,220,0.18)');
-      document.documentElement.style.setProperty('--rule-soft', 'rgba(242,234,220,0.08)');
-    } else {
-      const p2map = { '#F2EADC':'#EADFCB','#EFE8DD':'#E7DDCB','#F5F1E8':'#EDE7D8','#E8E3D6':'#DCD6C5' };
-      document.documentElement.style.setProperty('--paper-2', p2map[state.paper] || '#EADFCB');
-      document.documentElement.style.setProperty('--ink', '#1A1714');
-      document.documentElement.style.setProperty('--ink-soft', '#4A433C');
-      document.documentElement.style.setProperty('--ink-faint', '#8A8276');
-      document.documentElement.style.setProperty('--rule', 'rgba(26,23,20,0.16)');
-      document.documentElement.style.setProperty('--rule-soft', 'rgba(26,23,20,0.08)');
-    }
-
-    // name/role/loc
-    const firstName = state.name.split(' ')[0];
-    document.getElementById('nav-name').textContent = state.name;
-    document.getElementById('b-name').textContent = firstName;
-    document.getElementById('m-role').textContent = state.role.length > 28 ? state.role.slice(0,28)+'…' : state.role;
-    document.getElementById('m-loc').textContent = state.location;
-
-    // marquee
-    document.getElementById('marquee-wrap').style.display = state.showMarquee ? '' : 'none';
-
-    // cursor
-    const cursor = document.getElementById('cursor');
-    if (state.showCursor && window.matchMedia('(pointer: fine)').matches) {
-      cursor.classList.add('show');
-    } else {
-      cursor.classList.remove('show');
-    }
-
-    // italic accents
-    document.body.classList.toggle('no-italic', !state.italicDisplay);
-
-    // swatches
-    document.querySelectorAll('#t-sw .sw').forEach(el => {
-      el.classList.toggle('active', el.dataset.c === state.accent);
-    });
-    document.querySelectorAll('#t-paper .sw').forEach(el => {
-      el.classList.toggle('active', el.dataset.c === state.paper);
-    });
-    applyLang(state.lang || 'es');
-  }
-
-  // wire tweak inputs
-  document.getElementById('t-name').value = state.name;
-  document.getElementById('t-role').value = state.role;
-  document.getElementById('t-loc').value = state.location;
-  document.getElementById('t-marquee').checked = state.showMarquee;
-  document.getElementById('t-cursor').checked = state.showCursor;
-  document.getElementById('t-italic').checked = state.italicDisplay;
-
-  function post(edits) {
-    Object.assign(state, edits);
-    apply();
-    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*'); } catch(e) {}
-  }
-
-  document.getElementById('t-name').addEventListener('input', e => post({ name: e.target.value }));
-  document.getElementById('t-role').addEventListener('input', e => post({ role: e.target.value }));
-  document.getElementById('t-loc').addEventListener('input', e => post({ location: e.target.value }));
-  document.getElementById('t-marquee').addEventListener('change', e => post({ showMarquee: e.target.checked }));
-  document.getElementById('t-cursor').addEventListener('change', e => post({ showCursor: e.target.checked }));
-  document.getElementById('t-italic').addEventListener('change', e => post({ italicDisplay: e.target.checked }));
-  document.querySelectorAll('#t-sw .sw').forEach(el => {
-    el.addEventListener('click', () => post({ accent: el.dataset.c }));
-  });
-  document.querySelectorAll('#t-paper .sw').forEach(el => {
-    el.addEventListener('click', () => post({ paper: el.dataset.c }));
-  });
-  document.querySelectorAll('.lang-btn').forEach(el => {
-    el.addEventListener('click', () => post({ lang: el.dataset.l }));
+  prevBtn.addEventListener('click', () => {
+    if (currentStep > 1) { currentStep--; showStep(currentStep); }
   });
 
-  // edit-mode protocol: listener FIRST, then announce
-  window.addEventListener('message', (e) => {
-    const d = e.data || {};
-    if (d.type === '__activate_edit_mode') document.getElementById('tweaks').classList.add('show');
-    if (d.type === '__deactivate_edit_mode') document.getElementById('tweaks').classList.remove('show');
-  });
-  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
-
-  apply();
-
-  // ---------- scroll reveal ----------
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => io.observe(el));
-
-  // ---------- work preview follow ----------
-  const preview = document.getElementById('preview');
-  const previewPh = preview.querySelector('.ph');
-  const rows = document.querySelectorAll('.work__row');
-  const titles = {
-    es: ['Soft Hours · producto','Verdant · packaging','Midnight Press · portada','Kiln & Co · lookbook','Folk Money · UI','Warmline · identidad'],
-    en: ['Soft Hours · product shot','Verdant · packaging','Midnight Press · cover','Kiln & Co · lookbook','Folk Money · UI','Warmline · identity']
-  };
-  rows.forEach((row, i) => {
-    row.addEventListener('mouseenter', () => {
-      preview.classList.add('active');
-      const v = row.dataset.preview;
-      previewPh.className = 'ph v' + v;
-      const arr = titles[state.lang] || titles.es;
-      previewPh.textContent = arr[i] || 'preview';
-    });
-    row.addEventListener('mouseleave', () => preview.classList.remove('active'));
-    row.addEventListener('mousemove', (e) => {
-      const x = e.clientX + 24;
-      const y = e.clientY - 150;
-      preview.style.left = Math.min(window.innerWidth - 260, x) + 'px';
-      preview.style.top = Math.max(80, y) + 'px';
-    });
+  nextBtn.addEventListener('click', () => {
+    if (currentStep < totalSteps) { currentStep++; showStep(currentStep); }
   });
 
-  // ---------- cursor ----------
-  const cursor = document.getElementById('cursor');
-  let cx = 0, cy = 0, tx = 0, ty = 0;
-  document.addEventListener('mousemove', (e) => { tx = e.clientX; ty = e.clientY; });
-  function tick() {
-    cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
-    cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-    requestAnimationFrame(tick);
-  }
-  tick();
-  document.querySelectorAll('a, .work__row, .service, .sw, button, input, .nav__cta').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  submitBtn.addEventListener('click', () => {
+    // Aquí va la lógica de envío real (Formspree, fetch, etc.)
+    alert('¡Gracias! Te responderé en menos de 48 horas hábiles.');
   });
 
-  // ---------- marquee hover pause ----------
-  const track = document.getElementById('marquee-track');
-  document.getElementById('marquee-wrap').addEventListener('mouseenter', () => track.classList.add('paused'));
-  document.getElementById('marquee-wrap').addEventListener('mouseleave', () => track.classList.remove('paused'));
+  showStep(1);
 })();
-</script>
 
+// Chip toggle
+document.querySelectorAll('.chip-group').forEach(group => {
+  group.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      group.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Flow phases data
+const phases = [
+  {
+    num: '01', name: 'Llegada',
+    title: 'Llegas y reconoces tu situación',
+    desc: 'Llegas por una recomendación, búsqueda o redes. Lees el sitio y reconoces tu situación descrita en lenguaje claro, sin tecnicismos.',
+    steps: [
+      { icon: '🔍', title: 'Exploras el sitio', desc: 'Lees la propuesta. Te identificas con uno de los perfiles de cliente.' },
+      { icon: '📖', title: 'Revisas los servicios', desc: 'Entiendes las tres modalidades. Evalúas cuál te calza mejor.' },
+      { icon: '✓', title: 'Decides conversar', desc: 'Decides que tiene sentido al menos pedir una primera mirada. Llegas al formulario.' }
+    ]
+  },
+  {
+    num: '02', name: 'Formulario',
+    title: 'Cuentas tu negocio',
+    desc: 'Un formulario corto que te permite contar tu situación sin tener que explicarlo todo en una llamada. Sin compromiso.',
+    steps: [
+      { icon: '📝', title: 'Llenas el formulario', desc: 'Cuentas a qué te dedicas, tu situación digital y qué quieres lograr.' },
+      { icon: '✉️', title: 'Recibes confirmación', desc: 'De inmediato te llega un email con qué esperar y cuándo.' },
+      { icon: '⏱', title: 'Esperas respuesta', desc: 'Sabes que tendrás respuesta concreta en menos de 48 horas hábiles.' }
+    ]
+  },
+  {
+    num: '03', name: 'Diagnóstico',
+    title: 'Recibes una primera mirada',
+    desc: 'En 48 horas recibes un diagnóstico inicial — sin compromiso ni venta forzada. Si hace sentido seguir, agendamos una llamada para conocernos.',
+    steps: [
+      { icon: '⚡', title: 'Diagnóstico en 48h', desc: 'Recibes una primera mirada con observaciones y caminos posibles.' },
+      { icon: '💬', title: 'Llamada para conocernos', desc: 'Conversamos para resolver dudas y entender bien lo que necesitas.' },
+      { icon: '📄', title: 'Propuesta clara', desc: 'Recibes propuesta con alcance, plazos, precio cerrado y forma de pago.' }
+    ]
+  },
+  {
+    num: '04', name: 'Trabajo',
+    title: 'Empezamos a construir',
+    desc: 'Trabajamos en un espacio compartido donde ves el avance todo el tiempo. Vas validando entregas por hito, sin sorpresas.',
+    steps: [
+      { icon: '🚀', title: 'Onboarding al espacio', desc: 'Accedes a un Notion compartido. Definimos primeros entregables y fechas.' },
+      { icon: '🔄', title: 'Ciclo de avance', desc: 'Te muestro avances, validas, ajustamos. Tú siempre sabes dónde estamos.' },
+      { icon: '📦', title: 'Entrega lista para usar', desc: 'Recibes la plataforma o asistente lista, con capacitación incluida.' }
+    ]
+  },
+  {
+    num: '05', name: 'Después',
+    title: 'Soporte y siguientes pasos',
+    desc: 'Tu plataforma queda andando con un mes de soporte incluido. Si más adelante quieres seguir creciendo, evaluamos juntos qué tiene sentido.',
+    steps: [
+      { icon: '📊', title: 'Soporte incluido', desc: 'Un mes de acompañamiento para resolver dudas y ajustes finales.' },
+      { icon: '↗', title: 'Crecer si tiene sentido', desc: 'Cuando estés listo/a para el siguiente paso, evaluamos qué corresponde.' },
+      { icon: '🤝', title: 'Cierre limpio', desc: 'Entrega ordenada, documentación clara y capacitación a tu equipo.' }
+    ]
+  }
+];
+
+let activePhase = 0;
+
+function renderFlow() {
+  const phasesEl = document.getElementById('flow-phases');
+  const contentEl = document.getElementById('flow-content');
+
+  phasesEl.innerHTML = phases.map((p, i) => `
+    <button class="flow-phase-btn ${i === activePhase ? 'active' : ''}" onclick="setPhase(${i})">
+      <div class="flow-phase-num">${p.num}</div>
+      <div class="flow-phase-name">${p.name}</div>
+    </button>
+  `).join('');
+
+  const p = phases[activePhase];
+  contentEl.innerHTML = `
+    <div class="flow-phase-title">${p.title}</div>
+    <div class="flow-phase-desc">${p.desc}</div>
+    <div class="flow-steps-list">
+      ${p.steps.map(s => `
+        <div class="flow-step-item">
+          <div class="flow-step-icon">${s.icon}</div>
+          <div>
+            <h5>${s.title}</h5>
+            <p>${s.desc}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function setPhase(i) {
+  activePhase = i;
+  renderFlow();
+}
+
+renderFlow();
+</script>
 </body>
 </html>
