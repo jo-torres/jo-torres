@@ -8,9 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles__css.css">
+
 </head>
 <body>
+
+<!-- custom cursor -->
+<div class="cursor" id="cursor"></div>
 
 <!-- NAV -->
 <nav>
@@ -26,14 +30,20 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-name">JO TORRES</div>
-  <div class="hero-eyebrow">Plataformas web con IA para PYMEs · 20 años diseñando experiencias digitales</div>
+  <div class="hero-name"></div>
+  <div class="hero-eyebrow">Plataformas web con IA · 20 años diseñando experiencias digitales</div>
   <h1>¿Quieres incorporar IA a tu negocio pero no sabes <em>por dónde empezar</em>?</h1>
-  <p class="hero-sub">Diseño plataformas web con IA para PYMEs que quieren modernizar su servicio sin tecnicismos ni sorpresas. Atiende 24/7, automatiza lo repetitivo y enfócate en lo que solo tú puedes hacer.</p>
+  <p class="hero-sub">Diseño plataformas web con IA para que quieren modernizar su servicio sin tecnicismos ni sorpresas. Atiende 24/7, automatiza lo repetitivo y enfócate en lo que solo tú puedes hacer.</p>
   <div class="hero-actions">
     <a href="#formulario" class="btn-primary">Conversemos sobre tu negocio →</a>
     <a href="#como-funciona" class="btn-ghost">Ver cómo funciona</a>
   </div>
+  
+  <div class="hero__arrow">
+      <span data-i18n="hero_arrow">un rincón tranquilo<br>del internet</span>
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 6 Q 20 30, 34 20 M 34 20 L 26 14 M 34 20 L 28 28" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+  </div>
+  
   <div class="hero-trust">
     <div class="trust-item">
       <div class="trust-num">20+</div>
@@ -328,7 +338,7 @@
   </div>
 </section>
 
-<!-- FLUJO DEL CLIENTE -->
+<!-- FLUJO DEL CLIENTE >
 <section id="flujo">
   <div class="section-tag reveal">Flujo del cliente</div>
   <h2 class="section-title reveal">Del primer contacto a tu <em>plataforma andando</em></h2>
@@ -337,11 +347,25 @@
     <div class="flow-phases" id="flow-phases"></div>
     <div class="flow-content" id="flow-content"></div>
   </div>
-</section>
+</section-->
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <a href="/cdn-cgi/l/email-protection#41292e2d200131382c242f6f32353425282e" class="contact__email">hola<span style="color: var(--accent); font-style: italic;">@</span>pymen.studio</a>
+    <div class="contact__sub" id="contact-sub">
+      Acepto dos proyectos nuevos para <strong>mayo</strong> y <strong>julio</strong>. Escíbeme una nota corta sobre lo que estás haciendo y encontraremos tiempo para hablar.
+    </div>
+    <div class="contact__socials">
+      <a href="#">Are.na</a>
+      <a href="#">Instagram</a>
+      <a href="#">Read.cv</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Jo Torres<span>UX</span></div>
+  <div class="footer-logo">Jo Torres<span> UX</span></div>
   <p>© 2025 · Plataformas web con IA para PYMEs · Santiago, Chile</p>
   <a href="#formulario" class="btn-primary" style="font-size:12px;padding:10px 20px;">Conversemos →</a>
 </footer>
@@ -469,6 +493,7 @@ let activePhase = 0;
 function renderFlow() {
   const phasesEl = document.getElementById('flow-phases');
   const contentEl = document.getElementById('flow-content');
+  if (!phasesEl || !contentEl) return;
 
   phasesEl.innerHTML = phases.map((p, i) => `
     <button class="flow-phase-btn ${i === activePhase ? 'active' : ''}" onclick="setPhase(${i})">
@@ -501,6 +526,45 @@ function setPhase(i) {
 }
 
 renderFlow();
+
+// ---------- Cursor personalizado (portado del Landing JO Torres) ----------
+(function() {
+  const cursor = document.getElementById('cursor');
+  if (!cursor) return;
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+
+  let cx = 0, cy = 0, tx = 0, ty = 0;
+  document.addEventListener('mousemove', (e) => {
+    tx = e.clientX; ty = e.clientY;
+    cursor.classList.add('show');
+  });
+  document.addEventListener('mouseleave', () => cursor.classList.remove('show'));
+  document.addEventListener('mouseenter', () => cursor.classList.add('show'));
+
+  function tick() {
+    cx += (tx - cx) * 0.22;
+    cy += (ty - cy) * 0.22;
+    cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  function bindHover() {
+    document.querySelectorAll(
+      'a, button, input, textarea, select, .chip, .nav-cta, .btn-primary, .btn-ghost, .service-card, .persona-card, .flow-phase-btn, .trust-item, .contact__email, .contact__socials a'
+    ).forEach(el => {
+      if (el.dataset.cursorBound) return;
+      el.dataset.cursorBound = '1';
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+  }
+  bindHover();
+
+  // Re-vincular cuando el contenido dinámico (flow phases, form steps) cambia
+  const mo = new MutationObserver(() => bindHover());
+  mo.observe(document.body, { childList: true, subtree: true });
+})();
 </script>
 </body>
 </html>
