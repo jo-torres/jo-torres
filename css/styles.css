@@ -142,7 +142,8 @@ nav {
   font-size: 16px;
   font-weight: 300;
   color: var(--cream-dim);
-  max-width: 480px;
+  /*max-width: 480px;*/
+  max-width: 725px;
   line-height: 1.75;
   margin-bottom: 3rem;
   opacity: 0;
