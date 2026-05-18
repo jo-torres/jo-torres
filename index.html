@@ -18,63 +18,72 @@
     }
 
     :root {
-      --orange: #FF9544;
-      --coral: #FF5C3C;
-      --coral-deep: #D9362A;
-      --pink: #EC4080;
-      --pink-deep: #B82565;
-      --peach-soft: #FFE0B5;
-      --cream: #FFF6EE;
+      /* === Paleta aubergine + rose gold (luxe femenino moderno) === */
+      /* Acentos: rose gold como principal, mauve como secundario, vino mauve para profundidad */
+      --orange: #F2C9BE;          /* rose claro (antes naranja vibrante) */
+      --coral: #E8A89A;            /* rose gold — acento principal */
+      --coral-deep: #B57584;       /* mauve profundo para hovers */
+      --pink: #C8849F;             /* mauve pink — acento secundario */
+      --pink-deep: #8B5A6B;        /* vino mauve para profundidad */
+      --peach-soft: #F2C9BE;       /* rose claro, también para hovers en textos */
+      --cream: #FAF4EE;            /* crema cálido */
 
-      --bg-card: #FFFFFF;
-      --bg-card-soft: #FFFBF6;
-      --text: #2A1419;
-      --text-soft: #4A2530;
-      --muted: rgba(42, 20, 25, 0.62);
-      --line-card: rgba(42, 20, 25, 0.08);
+      /* Cards y superficies — ahora oscuras (aubergine elevated) */
+      --bg-card: #1F1521;          /* aubergine elevated */
+      --bg-card-soft: #281B2B;     /* aubergine un poco más claro para sub-cards */
+      --text: #FAF4EE;             /* texto en cards: crema cálido */
+      --text-soft: rgba(250, 244, 238, 0.78);
+      --muted: rgba(250, 244, 238, 0.6);
+      --line-card: rgba(232, 168, 154, 0.18);  /* líneas en rose translúcido */
 
-      --on-color: #FFFFFF;
-      --on-color-muted: rgba(255, 246, 238, 0.85);
-      --line-on-color: rgba(255, 255, 255, 0.25);
+      /* Texto sobre el fondo aubergine global */
+      --on-color: #FAF4EE;
+      --on-color-muted: rgba(250, 244, 238, 0.7);
+      --line-on-color: rgba(232, 168, 154, 0.22);
+
+      /* Color de fondo global aubergine */
+      --bg-deep: #160F18;          /* aubergine profundo */
+      --bg-deep-2: #1A1019;        /* variación */
 
       --serif: 'Instrument Serif', serif;
-	  
-	  --accent: #E8A89A;          /* oro rosa / rose gold — acento principal */
+ 
+      --accent: #E8A89A;          /* oro rosa / rose gold — acento principal */
       --accent-soft: #F2C9BE;     /* rose claro */
       --accent-mauve: #C8849F;    /* mauve pink — acento secundario */
-      --accent-deep: #8B5A6B;     /* vino mauve para profundidad */	
+      --accent-deep: #8B5A6B;     /* vino mauve para profundidad */  
+ 
     }
 
-	/*Altura mínima para los textos*/
-	.min-height-1{
-	  min-height: 115px;
+/*Altura mínima para los textos*/
+.min-height-1{
+ min-height: 115px;
       padding-left: 13px;
-	}
-	
-	.min-height-2{
-	  min-height: 80px;
-	}
-	
-	.min-height-3{
-	  line-height: 105px;
-	}
+}
 
-	.min-height-4{
-	  line-height: 90px;
-	}
+.min-height-2{
+ min-height: 80px;
+}
+
+.min-height-3{
+ line-height: 105px;
+}
+
+.min-height-4{
+ line-height: 90px;
+}
 
     /* ===== Custom scrollbar ===== */
     html {
-      background: var(--coral);
-      scrollbar-color: var(--coral-deep) rgba(255, 255, 255, 0.15);
+      background: var(--bg-deep);
+      scrollbar-color: var(--coral) rgba(250, 244, 238, 0.08);
       scrollbar-width: thin;
     }
 
     ::-webkit-scrollbar { width: 10px; }
 
     ::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.08);
-      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(250, 244, 238, 0.04);
+      border-left: 1px solid rgba(232, 168, 154, 0.12);
     }
 
     ::-webkit-scrollbar-thumb {
@@ -96,11 +105,9 @@
       position: relative;
       background:
         linear-gradient(170deg,
-          var(--orange) 0%,
-          var(--coral) 28%,
-          #ED5050 50%,
-          var(--pink) 72%,
-          var(--pink-deep) 100%);
+          var(--bg-deep) 0%,
+          var(--bg-deep-2) 50%,
+          #1F1521 100%);
       min-height: 100vh;
     }
 
@@ -109,8 +116,8 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        linear-gradient(rgba(232, 168, 154, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 168, 154, 0.025) 1px, transparent 1px);
       background-size: 60px 60px;
       z-index: 0;
       pointer-events: none;
@@ -123,11 +130,9 @@
       z-index: 9999999;
       background:
         linear-gradient(170deg,
-          var(--orange) 0%,
-          var(--coral) 28%,
-          #ED5050 50%,
-          var(--pink) 72%,
-          var(--pink-deep) 100%);
+          var(--bg-deep) 0%,
+          var(--bg-deep-2) 50%,
+          #1F1521 100%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -212,7 +217,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-	  backdrop-filter: invert(1);
+ backdrop-filter: invert(1);
+ backdrop-filter: drop-shadow(2px 4px 6px black);
     }
 
     .cursor-dot {
@@ -254,8 +260,8 @@
     .cursor.view .cursor-label { opacity: 1; }
 
     ::selection {
-      background: #FFFFFF;
-      color: var(--coral-deep);
+      background: var(--coral);
+      color: var(--bg-deep);
     }
 
     .noise {
@@ -274,7 +280,7 @@
       width: 900px;
       height: 900px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 224, 181, 0.45), transparent 70%);
+      background: radial-gradient(circle, rgba(232, 168, 154, 0.28), transparent 70%);
       filter: blur(120px);
       top: -250px;
       right: -250px;
@@ -287,7 +293,7 @@
       width: 700px;
       height: 700px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
+      background: radial-gradient(circle, rgba(200, 132, 159, 0.22), transparent 70%);
       filter: blur(120px);
       bottom: -300px;
       left: -200px;
@@ -313,7 +319,7 @@
       z-index: 999;
       padding: 28px 60px;
       backdrop-filter: blur(20px) saturate(140%);
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(22, 15, 24, 0.55);
       border-bottom: 1px solid var(--line-on-color);
       transform: translateY(-100%);
       transition: transform 1s cubic-bezier(.76,0,.24,1) 0.3s;
@@ -350,34 +356,66 @@
       gap: 42px;
     }
 
+    /* ===== Hover swap menu — robust dual-layer technique ===== */
     .link-swap {
       position: relative;
-      overflow: hidden;
       display: inline-block;
-      color: rgba(255, 255, 255, 0.85);
+      color: var(--on-color-muted);
       text-decoration: none;
       font-size: 0.95rem;
-      height: 1.2em;
-      line-height: 1.2;
+      line-height: 1.4;
+      overflow: hidden;
+      padding: 4px 0;
+      white-space: nowrap;
     }
 
+    /* Two stacked spans: first visible, second slides up from below on hover */
     .link-swap-inner {
       display: inline-block;
-      transition: transform 0.5s cubic-bezier(.76,0,.24,1);
+      position: relative;
+      transition: transform 0.5s cubic-bezier(.76,0,.24,1),
+                  color 0.4s ease;
     }
 
-    .link-swap-inner::after {
+    .link-swap-inner::before {
+      /* The hover label — sits below the visible text, slides up on hover */
       content: attr(data-text);
-      display: block;
-      color: var(--peach-soft);
-      font-style: italic;
-      font-family: var(--serif);
-      font-size: 1.1em;
-      line-height: 1.2;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      color: var(--coral);
+      /*font-style: italic;
+      font-family: var(--serif);*/
+      font-size: 1.05em;
+      line-height: 1.4;
+      letter-spacing: -0.5px;
+      transition: color 0.4s ease;
+      white-space: nowrap;
     }
 
     .link-swap:hover .link-swap-inner {
       transform: translateY(-100%);
+    }
+
+    .link-swap:hover {
+      color: transparent;
+    }
+
+    /* Subtle underline animation accent */
+    .link-swap::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--coral);
+      transition: width 0.5s cubic-bezier(.76,0,.24,1);
+    }
+
+    .link-swap:hover::after {
+      width: 100%;
     }
 
     /* ===== Marquee ===== */
@@ -456,11 +494,11 @@
       margin-bottom: 12px;
       line-height: 1.5;
       text-shadow: 0 2px 20px rgba(216, 54, 42, 0.3);
-	  font-style: normal;
+ font-style: normal;
     }
 
     .hero-text h1 {
-      font-size: 7rem;
+      font-size: 100px;
       line-height: 0.92;
       font-weight: 800;
       letter-spacing: -7px;
@@ -477,6 +515,13 @@
       color: var(--peach-soft);
       letter-spacing: -2px;
     }
+
+.hero-text h1 .span-style-rose {
+ background: linear-gradient(135deg, var(--orange) 0%, var(--accent-mauve) 100%);
+ -webkit-background-clip: text;
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
 
     .line-mask {
       display: block;
@@ -551,8 +596,8 @@
 
     .btn:hover {
       transform: translateY(-6px);
-      border-color: #FFFFFF;
-      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--coral);
+      background: rgba(232, 168, 154, 0.1);
     }
 
     .btn-primary:hover {
@@ -584,6 +629,7 @@
       box-shadow:
         0 40px 100px rgba(184, 37, 101, 0.35),
         0 16px 40px rgba(216, 54, 42, 0.2);
+ box-shadow: 0 10px 30px rgba(232, 168, 154, 0.25);
     }
 
     .hero-card::before {
@@ -594,13 +640,6 @@
         radial-gradient(circle at 100% 0%, rgba(255, 92, 60, 0.1), transparent 60%),
         radial-gradient(circle at 0% 100%, rgba(236, 64, 128, 0.08), transparent 60%);
     }
-	
-	.hero-text h1 .span-style-rose {
-	  --background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mauve) 100%);
-	  --webkit-background-clip: text;
-	  --background-clip: text;
-	  --webkit-text-fill-color: transparent;
-	}
 
     .dashboard {
       display: flex;
@@ -616,30 +655,30 @@
       border-radius: 28px;
       padding: 25px;
       transition: 0.4s ease;
-	  font-style: normal;
+ font-style: normal;
     }
 
     .mini-card:hover {
       transform: translateY(-10px);
-      background: #FFFFFF;
+      background: var(--bg-card-soft);
       border-color: var(--coral);
-      box-shadow: 0 18px 40px rgba(255, 92, 60, 0.25);
+      box-shadow: 0 18px 40px rgba(232, 168, 154, 0.15);
     }
 
     .mini-card h3 {
       margin-bottom: 14px;
       font-size: 2rem;
       color: var(--coral);
-	  color: var(--text);
+ color: var(--text);
       font-weight: 600;
     }
 
-	.mini-card h3 em {
-	  font-family: var(--serif);
+.mini-card h3 em {
+ font-family: var(--serif);
       font-style: italic;
-      color: var(--coral-deep);
+      color: var(--coral);
       font-weight: 400;
-	}
+}
 
     .mini-card p {
       color: var(--muted);
@@ -682,7 +721,8 @@
     }
 
     .section-label {
-      display: inline-block;
+      display: block;
+      width: fit-content;
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -696,8 +736,9 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 30px;
+      width: 100%;
       max-width: 1330px;
     }
 
@@ -714,6 +755,7 @@
       color: var(--text);
       opacity: 0;
       transform: translateY(60px);
+ box-shadow: 0 30px 80px rgb(232 168 154 / 30%), inset 0 1px 0 rgba(255, 255, 255, 0.4);
     }
 
     .service-card.in {
@@ -768,7 +810,7 @@
     .service-card h3 em {
       font-family: var(--serif);
       font-style: italic;
-      color: var(--coral-deep);
+      color: var(--coral);
       font-weight: 400;
     }
 
@@ -795,6 +837,7 @@
       box-shadow:
         0 30px 80px rgba(184, 37, 101, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
+ box-shadow: 0 10px 30px rgba(232, 168, 154, 0.25);
     }
 
     .about-image::before {
@@ -918,6 +961,7 @@
       box-shadow:
         0 30px 80px rgba(184, 37, 101, 0.25),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
+ box-shadow: 0 10px 30px rgba(232, 168, 154, 0.25);
     }
 
     .community-card::before {
@@ -1007,7 +1051,7 @@
       align-items: center;
       justify-content: center;
       min-height: 240px;
-	  display: block;
+ display: block;
     }
 
     .community-symbol {
@@ -1044,6 +1088,7 @@
       box-shadow:
         0 40px 100px rgba(184, 37, 101, 0.4),
         0 16px 40px rgba(216, 54, 42, 0.25);
+ box-shadow: 0 10px 30px rgba(232, 168, 154, 0.25);
       color: var(--text);
     }
 
@@ -1076,6 +1121,13 @@
       margin-bottom: 30px;
       position: relative;
       z-index: 2;
+      color: var(--text);
+      background: none;
+      -webkit-text-fill-color: initial;
+    }
+
+    .cta-box h2 .min-height-3 {
+      display: inline-block;
       background: linear-gradient(135deg, var(--text) 0%, var(--coral-deep) 100%);
       -webkit-background-clip: text;
       background-clip: text;
@@ -1162,6 +1214,7 @@
       box-shadow:
         0 40px 100px rgba(184, 37, 101, 0.35),
         0 16px 40px rgba(216, 54, 42, 0.2);
+ box-shadow: 0 10px 30px rgba(232, 168, 154, 0.25);
       color: var(--text);
       text-align: left;
     }
@@ -1189,7 +1242,7 @@
     .progress-track {
       flex: 1;
       height: 4px;
-      background: rgba(42, 20, 25, 0.08);
+      background: rgba(250, 244, 238, 0.1);
       border-radius: 4px;
       overflow: hidden;
     }
@@ -1213,7 +1266,7 @@
     }
 
     .progress-label strong {
-      color: var(--coral-deep);
+      color: var(--coral);
       font-weight: 700;
     }
 
@@ -1264,7 +1317,7 @@
     .form-step h3 em {
       font-family: var(--serif);
       font-style: italic;
-      color: var(--coral-deep);
+      color: var(--coral);
       font-weight: 400;
     }
 
@@ -1302,13 +1355,13 @@
 
     .option-card:hover {
       border-color: var(--coral);
-      background: #FFFFFF;
+      background: rgba(232, 168, 154, 0.06);
     }
 
     .option-card.is-checked {
       border-color: var(--coral);
-      background: linear-gradient(135deg, rgba(255, 149, 68, 0.08), rgba(236, 64, 128, 0.05));
-      box-shadow: 0 6px 18px rgba(255, 92, 60, 0.15);
+      background: linear-gradient(135deg, rgba(232, 168, 154, 0.12), rgba(200, 132, 159, 0.08));
+      box-shadow: 0 6px 18px rgba(232, 168, 154, 0.15);
     }
 
     .option-check {
@@ -1321,7 +1374,7 @@
       justify-content: center;
       flex-shrink: 0;
       transition: all 0.3s ease;
-      background: #FFFFFF;
+      background: var(--bg-card);
     }
 
     .option-card.is-checked .option-check {
@@ -1334,7 +1387,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #FFFFFF;
+      background: var(--text);
       transform: scale(0);
       transition: transform 0.3s cubic-bezier(.16,1,.3,1);
     }
@@ -1390,12 +1443,12 @@
     .form-field input:focus {
       outline: none;
       border-color: var(--coral);
-      background: #FFFFFF;
-      box-shadow: 0 0 0 4px rgba(255, 92, 60, 0.1);
+      background: rgba(232, 168, 154, 0.06);
+      box-shadow: 0 0 0 4px rgba(232, 168, 154, 0.15);
     }
 
     .form-field input::placeholder {
-      color: rgba(42, 20, 25, 0.35);
+      color: rgba(250, 244, 238, 0.35);
     }
 
     .radio-row {
@@ -1428,14 +1481,14 @@
 
     .radio-card:hover {
       border-color: var(--coral);
-      background: #FFFFFF;
+      background: rgba(232, 168, 154, 0.08);
     }
 
     .radio-card.is-checked {
       border-color: var(--coral);
       background: linear-gradient(135deg, var(--coral) 0%, var(--pink) 100%);
-      color: #FFFFFF;
-      box-shadow: 0 8px 20px rgba(255, 92, 60, 0.25);
+      color: var(--bg-deep);
+      box-shadow: 0 8px 20px rgba(232, 168, 154, 0.25);
     }
 
     .methods-grid {
@@ -1475,22 +1528,22 @@
 
     .method-card:hover {
       border-color: var(--coral);
-      background: #FFFFFF;
+      background: rgba(232, 168, 154, 0.08);
     }
 
     .method-card:hover svg {
-      stroke: var(--coral-deep);
+      stroke: var(--coral);
     }
 
     .method-card.is-checked {
       border-color: var(--coral);
       background: linear-gradient(135deg, var(--coral) 0%, var(--pink) 100%);
-      color: #FFFFFF;
-      box-shadow: 0 10px 24px rgba(255, 92, 60, 0.3);
+      color: var(--bg-deep);
+      box-shadow: 0 10px 24px rgba(232, 168, 154, 0.3);
     }
 
     .method-card.is-checked svg {
-      stroke: #FFFFFF;
+      stroke: var(--bg-deep);
     }
 
     .method-name {
@@ -1523,20 +1576,20 @@
 
     .btn-form:hover {
       border-color: var(--coral);
-      color: var(--coral-deep);
+      color: var(--coral);
     }
 
     .btn-form.primary {
       background: linear-gradient(120deg, var(--orange) 0%, var(--coral) 50%, var(--pink) 100%);
-      color: #FFFFFF;
+      color: var(--bg-deep);
       border-color: transparent;
-      box-shadow: 0 12px 28px rgba(255, 92, 60, 0.35);
+      box-shadow: 0 12px 28px rgba(232, 168, 154, 0.35);
     }
 
     .btn-form.primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 18px 40px rgba(255, 92, 60, 0.45);
-      color: #FFFFFF;
+      box-shadow: 0 18px 40px rgba(232, 168, 154, 0.45);
+      color: var(--bg-deep);
     }
 
     .btn-form:disabled {
@@ -1585,7 +1638,7 @@
     .form-success h3 em {
       font-family: var(--serif);
       font-style: italic;
-      color: var(--coral-deep);
+      color: var(--coral);
       font-weight: 400;
     }
 
@@ -1672,6 +1725,10 @@
         grid-template-columns: 1fr;
       }
 
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .community-card {
         grid-template-columns: 1fr;
         padding: 50px 40px;
@@ -1716,7 +1773,7 @@
       .form-intro h2,
       .cta-box h2,
       .community-text h2 {
-        font-size: 2.8rem;
+        font-size: 4.5rem;
         letter-spacing: -2px;
       }
 
@@ -1733,6 +1790,16 @@
         padding: 30px 24px;
       }
 
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .service-card {
+        padding: 32px 24px;
+        min-height: auto;
+      }
+
       .options-grid,
       .methods-grid {
         grid-template-columns: 1fr;
@@ -1742,7 +1809,256 @@
         min-height: 480px;
       }
     }
-  </style>
+ 
+/* =========================================================
+   JUANMORA.CO INSPIRED EFFECTS
+========================================================= */
+
+.fx-title {
+  position: relative;
+  display: inline-block;
+  perspective: 1200px;
+}
+
+.fx-title .fx-word {
+  display: inline-block;
+  margin-right: 0.18em;
+  transform-style: preserve-3d;
+  transition:
+    transform .8s cubic-bezier(.16,1,.3,1),
+    opacity .8s ease,
+    filter .8s ease;
+  will-change: transform;
+}
+
+/* Fallback hover for split-line titles that use line-mask/line-inner markup. */
+.fx-title.fx-structured .line-mask {
+  transform-style: preserve-3d;
+  transition:
+    transform .8s cubic-bezier(.16,1,.3,1),
+    opacity .8s ease,
+    filter .8s ease;
+  will-change: transform;
+}
+
+.fx-title:hover .fx-word {
+  transform:
+    translateY(-8px)
+    rotateX(8deg)
+    rotateY(-6deg)
+    scale(1.02);
+
+  filter:
+    drop-shadow(0 20px 40px rgba(232,168,154,.35))
+    blur(.15px);
+}
+
+.fx-title.fx-structured:hover .line-mask {
+  transform:
+    translateY(-8px)
+    rotateX(8deg)
+    rotateY(-6deg)
+    scale(1.02);
+
+  filter:
+    drop-shadow(0 20px 40px rgba(232,168,154,.35))
+    blur(.15px);
+}
+
+/* CTA gradient title: keep markup intact and animate its direct span safely. */
+.fx-title.fx-cta-safe > * {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--text) 0%, var(--coral-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-style: preserve-3d;
+  transition:
+    transform .8s cubic-bezier(.16,1,.3,1),
+    filter .8s ease;
+  will-change: transform;
+}
+
+.fx-title.fx-cta-safe:hover > * {
+  transform:
+    translateY(-8px)
+    rotateX(8deg)
+    rotateY(-6deg)
+    scale(1.02);
+
+  filter:
+    drop-shadow(0 20px 40px rgba(232,168,154,.35))
+    blur(.15px);
+}
+
+.fx-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--coral),
+    var(--pink),
+    transparent
+  );
+  transform: translateX(-50%);
+  transition: width .8s cubic-bezier(.16,1,.3,1);
+}
+
+.fx-title:hover::after {
+  width: 100%;
+}
+
+.fx-glow {
+  position: relative;
+}
+
+.fx-glow::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background:
+    radial-gradient(circle,
+      rgba(232,168,154,.12),
+      transparent 70%);
+
+  opacity: 0;
+  transition: opacity .6s ease;
+  pointer-events: none;
+  filter: blur(30px);
+}
+
+.fx-glow:hover::before {
+  opacity: 1;
+}
+
+.fx-btn {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition:
+    transform .45s cubic-bezier(.16,1,.3,1),
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+.fx-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.25),
+      transparent 35%,
+      transparent 65%,
+      rgba(255,255,255,.12)
+    );
+
+  opacity: 0;
+  transform: translateX(-120%);
+  transition:
+    transform .9s cubic-bezier(.16,1,.3,1),
+    opacity .4s ease;
+}
+
+.fx-btn:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02)
+    rotateX(8deg);
+
+  box-shadow:
+    0 30px 80px rgba(232,168,154,.35),
+    0 10px 30px rgba(200,132,159,.18);
+
+  border-color: rgba(255,255,255,.35);
+}
+
+.fx-btn:hover::before {
+  /*opacity: 1;
+  transform: translateX(120%);*/
+}
+
+.nav-links a {
+  transition:
+    transform .45s cubic-bezier(.16,1,.3,1),
+    opacity .45s ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-4px);
+}
+
+footer a,
+.greeting-email,
+.btn-community {
+  position: relative;
+  overflow: hidden;
+}
+
+footer a::after,
+.greeting-email::after,
+.btn-community::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--coral),
+    transparent
+  );
+
+  transform: translateX(-100%);
+  transition: transform .7s cubic-bezier(.16,1,.3,1);
+}
+
+footer a:hover::after,
+.greeting-email:hover::after,
+.btn-community:hover::after {
+  transform: translateX(100%);
+}
+
+.reveal-lines .line-inner {
+  filter: blur(12px);
+  opacity: 0;
+}
+
+.reveal-lines.active .line-inner {
+  opacity: 1;
+  filter: blur(0px);
+}
+
+.hero-text h1,
+.section-title h2,
+.about-text h2,
+.community-text h2,
+.cta-box h2 {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .25s linear;
+}
+
+.hero-card,
+.service-card,
+.form-box,
+.community-card,
+.cta-box {
+  transition:
+    transform .6s cubic-bezier(.16,1,.3,1),
+    box-shadow .6s ease,
+    border-color .6s ease;
+}
+
+</style>
 </head>
 <body>
 
@@ -1776,9 +2092,9 @@
       <div class="logo">Fondo <span>&amp;</span> Forma Studio</div>
 
       <div class="nav-links">
-        <a href="#services" class="link-swap"><span class="link-swap-inner" data-text="Servicios">Que hacemos</span></a>
-        <a href="#community" class="link-swap"><span class="link-swap-inner" data-text="Comunidad">Comunidad de mujeres</span></a>
-        <a href="#contact" class="link-swap"><span class="link-swap-inner" data-text="Contacto">Trabajemos juntas</span></a>
+        <a href="#services" class="link-swap"><span class="link-swap-inner" data-text="Que hacemos">Que hacemos</span></a>
+        <a href="#community" class="link-swap"><span class="link-swap-inner" data-text="Comunidad de mujeres">Comunidad Cuidadas Emprendemos</span></a>
+        <a href="#contact" class="link-swap"><span class="link-swap-inner" data-text="Trabajemos juntas">Trabajemos juntas</span></a>
       </div>
     </nav>
   </header>
@@ -1787,19 +2103,19 @@
     <div class="hero-content">
 
       <div class="hero-text reveal-lines">
-        <h1>
-		  <span class="line-mask"><span class="line-inner min-height-1">Quieres</span></span>
+        <h1 class="fx-title fx-glow">
+ <span class="line-mask"><span class="line-inner min-height-1">Quieres</span></span>
           <span class="line-mask"><span class="line-inner min-height-1">integrar la IA</span></span>
-          <span class="line-mask span-style-rose">a tu PYME<span class="line-inner span-style  min-height-1"><em> y no sabes como.</em></span></span>
+          <span class="line-mask span-style-rose">a tu PYME <em> y no sabes como.</em></span>
         </h1>
-		
+
         <span class="hero-subtext">Acompañamos a mujeres que están construyendo su ingreso desde casa. Podrás atender 24/7, libera tu tiempo y enfócate en lo que solo tú puedes hacer.</span>
 
         <p></p>
 
         <div class="buttons">
-          <a href="#contact" class="btn btn-primary">Trabajemos juntas</a>
-          <a href="#services" class="btn">Explorar servicios</a>
+          <a href="#contact" class="btn btn-primary fx-btn">Trabajemos juntas</a>
+          <a href="#services" class="btn fx-btn">Explorar servicios</a>
         </div>
       </div>
 
@@ -1867,8 +2183,8 @@
   <section id="services">
 
     <div class="section-title reveal-lines">
-      <span class="section-label">Servicios</span>
-      <h2>
+      <span class="section-label">Que hacemos</span>
+      <h2 class="fx-title fx-glow">
         <span class="line-mask"><span class="line-inner min-height-2">Servicios <em>digitales</em></span></span>
         <span class="line-mask"><span class="line-inner min-height-2">para tu emprendimiento.</span></span>
       </h2>
@@ -1928,7 +2244,7 @@
 
       <div class="about-text reveal-lines">
         <span class="section-label">Nosotras</span>
-        <h2>
+        <h2 class="fx-title fx-glow">
           <span class="line-mask"><span class="line-inner  min-height-2">Tu negocio</span></span>
           <span class="line-mask"><span class="line-inner  min-height-2">desde casa, <em>profesional</em>.</span></span>
         </h2>
@@ -1972,15 +2288,14 @@
     <div class="community-card reveal">
 
       <div class="community-text">
-        <span class="section-label">Comunidad para mujeres</span>
-        <h2 class="reveal-lines">
-          <span class="line-mask"><span class="line-inner  min-height-2">¿Eres</span></span>
-          <span class="line-mask"><span class="line-inner"><em>cuidadora</em>?</span></span>
+        <span class="section-label">Comunidad Cuidadas Emprendemos</span>
+        <h2 class="reveal-lines" class="fx-title fx-glow">
+          <span class="line-mask"><span class="line-inner  min-height-2">Eres cuidadora y quieres <em>generar ingresos desde casa</em></span></span>
         </h2>
         <p>
-          Más allá del servicio digital, existe una red exclusiva de mujeres cuidadoras que se apoyan: madres, terapeutas, educadoras, doulas, profesionales del bienestar. Aprendizaje, mentorías y comunidad entre quienes sostienen mientras emprenden.
+          Más allá del servicio digital, existe una red exclusiva de emprendedoras cuidadoras que se apoyan: madres, terapeutas, educadoras, profesionales del bienestar. Aprendizaje, mentorías y comunidad entre quienes sostienen mientras emprenden.
         </p>
-        <a href="https://cuidadoras.fondoyforma.ai" target="_blank" rel="noopener" class="btn-community">
+        <a href="https://cuidadoras.fondoyforma.ai" target="_blank" rel="noopener" class="btn-community fx-btn">
           Conoce la comunidad
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 17L17 7M17 7H7M17 7V17"/>
@@ -1989,7 +2304,7 @@
       </div>
 
       <div class="community-visual">
-		<div class="community-symbol"><img src="img/lg_cuidadas.png"/></div>
+<div class="community-symbol"><img src="img/lg_cuidadas.png"/></div>
         <div class="community-symbol">Cuidad<em>as</em>.</div>
       </div>
 
@@ -2002,7 +2317,7 @@
 
     <div class="form-intro reveal-lines">
       <span class="section-label" style="margin-bottom: 24px;">Trabajemos juntas</span>
-      <h2>
+      <h2 class="fx-title fx-glow">
         <span class="line-mask"><span class="line-inner min-height-4">Cuéntanos sobre tu</span></span>
         <span class="line-mask"><span class="line-inner min-height-4"><em>emprendimiento</em> en 3 pasos.</span></span>
       </h2>
@@ -2197,15 +2512,15 @@
 
     <div class="cta-box reveal">
 
-      <h2>
+      <h2 class="fx-title fx-glow">
         <span class="min-height-3">Construyamos <em>juntas</em> una comunidad con impacto.</span>
       </h2>
 
       <p>
-        Creamos un espacio seguro para mujeres que quieren construir su ingreso desde casa — sin renunciar al cuidado ni a su tiempo.
+        Creamos un espacio seguro para mujeres que quieren construir su ingreso desde casa sin renunciar al cuidado ni a su tiempo.
       </p>
 
-      <a href="#contact" class="btn btn-primary">
+      <a href="#contact" class="btn btn-primary fx-btn">
         Agendar reunión
       </a>
 
@@ -2515,6 +2830,105 @@
     });
 
   </script>
+
+
+<script>
+
+const magneticButtons = document.querySelectorAll('.fx-btn');
+
+magneticButtons.forEach(btn => {
+
+  btn.addEventListener('mousemove', e => {
+
+    const rect = btn.getBoundingClientRect();
+
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    btn.style.transform = `
+      translate(${x * 0.12}px, ${y * 0.12}px)
+      scale(1.03)
+      rotateX(${y * -0.04}deg)
+      rotateY(${x * 0.04}deg)
+    `;
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+
+});
+
+const cinematicTitles = document.querySelectorAll(
+  '.hero-text h1, .section-title h2, .about-text h2, .community-text h2, .cta-box h2'
+);
+
+window.addEventListener('mousemove', e => {
+
+  const x = (e.clientX / window.innerWidth - 0.5);
+  const y = (e.clientY / window.innerHeight - 0.5);
+
+  cinematicTitles.forEach(title => {
+
+    title.style.transform = `
+      rotateX(${y * -4}deg)
+      rotateY(${x * 6}deg)
+      translateZ(0)
+    `;
+
+  });
+
+});
+
+document.querySelectorAll('.fx-title').forEach(title => {
+  // Keep split-line reveal markup intact.
+  if (title.querySelector('.line-mask')) {
+    title.classList.add('fx-structured');
+    return;
+  }
+
+  // Gradient CTA title can disappear if words are wrapped into child spans.
+  if (title.closest('.cta-box')) {
+    title.classList.add('fx-cta-safe');
+    return;
+  }
+
+  const walker = document.createTreeWalker(
+    title,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node) {
+        if (!node.textContent.trim()) return NodeFilter.FILTER_REJECT;
+        if (node.parentElement?.classList.contains('fx-word')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    }
+  );
+
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  textNodes.forEach(node => {
+    const parts = node.textContent.split(/(\s+)/);
+    const fragment = document.createDocumentFragment();
+
+    parts.forEach(part => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) {
+        fragment.appendChild(document.createTextNode(part));
+      } else {
+        const span = document.createElement('span');
+        span.className = 'fx-word';
+        span.textContent = part;
+        fragment.appendChild(span);
+      }
+    });
+
+    node.parentNode.replaceChild(fragment, node);
+  });
+});
+
+</script>
 
 </body>
 </html>
