@@ -1265,7 +1265,7 @@
     .services-gallery.active .mask-img-service {
       clip-path: inset(0% 0% 0% 0%);
       -webkit-clip-path: inset(0% 0% 0% 0%);
-	  height: fit-content;
+	  /*height: fit-content;*/
     }
 
     .services-gallery.active .mask-img-service .img-service,
